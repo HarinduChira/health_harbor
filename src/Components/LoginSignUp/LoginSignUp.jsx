@@ -1,10 +1,9 @@
 import React,{useState} from 'react'
 import './LoginSignUp.css'
-
+import axios from 'axios'
 import user from './user.png'
 import email from './email.png'
 import password from './password.png'
-
 
 
 const CusLogin = () => {
