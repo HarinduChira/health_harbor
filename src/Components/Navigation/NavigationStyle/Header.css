@@ -1,0 +1,35 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 120px;
+    color: white;
+}
+
+.nav-logo{
+    font-family: Outfit;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    gap: 90px;
+}
+
+.nav-item :hover{
+    border-radius: 20px;
+    background-color: #fff;
+    color : #262626;
+    font-size: 20px;
+}
+ 
+.nav-item-contact{
+    border-radius: 20px;
+    padding: 10px 38px;
+    background-color: #fff;
+    color : #262626;
+}
