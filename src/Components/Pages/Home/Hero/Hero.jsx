@@ -1,6 +1,5 @@
 import './Hero.css'
 import arrow from '../Background/arrow.png'
-import log from '../Background/log.png'
 
 const Hero = ({heroData,setHeroIndex,heroIndex}) => {
   return (
@@ -21,12 +20,7 @@ const Hero = ({heroData,setHeroIndex,heroIndex}) => {
           <li onClick={()=> setHeroIndex(0)}  className={heroIndex === 0? "hero-dot orange":"hero-dot"}></li>
           <li onClick={()=> setHeroIndex(1)}  className={heroIndex === 1? "hero-dot orange":"hero-dot"}></li>
           <li onClick={()=> setHeroIndex(2)}  className={heroIndex === 2? "hero-dot orange":"hero-dot"}></li>
-        </ul>
-      
-        <div className="hero-signUp">
-          <img src={log} alt="" />
-          <p>Sign Up</p>
-        </div>
+        </ul> 
       </div>
     </div>
   )

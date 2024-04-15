@@ -1,6 +1,6 @@
 .hero{
-    margin: 0px 120px;
-    margin-top: 150px;
+    margin: 250px 120px 0px;
+
 }
 
 .hero-text{
@@ -30,7 +30,7 @@
 }
 
 .hero-dot-play{
-    margin-top: 150px;
+    margin-top: 250px;
     display: flex;
     justify-content: space-between;
 }

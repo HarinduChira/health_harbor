@@ -2,6 +2,10 @@ import React, {useEffect, useState} from 'react'
 import Background from './Background/Background';
 import Header from '../../Navigation/Header';
 import Hero from './Hero/Hero';
+import Content from './Content/Content';
+import Title from './Title/Title';
+import About from './About/About';
+import Footer from '../../Navigation/Footer';
 const Home = () => {
 
   let heroData = [
@@ -15,21 +19,23 @@ const Home = () => {
   useEffect(() => {
     setInterval(() => {
       setHeroIndex((count) => {return count===2? 0:count+1})
-    }, 6000);
+    }, 5000);
   },[])
 
   return (
-    <div>
+    <div id='home'>
         <Header/> 
-
         <Background/>
-
         <Hero
           heroData = {heroData[heroIndex]}
           heroIndex = {heroIndex}
           setHeroIndex = {setHeroIndex}
         />
-   
+        <Title subTitle='Our Products' title= 'What We Offer'/>
+        <Content/>
+        <About/>
+        <Footer/>
+
     </div>
   )
 }

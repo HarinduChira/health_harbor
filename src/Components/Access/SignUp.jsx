@@ -3,6 +3,7 @@ import emailimg from "./AccessStyle/email.png";
 import passwordimg from "./AccessStyle/password.png";
 import nameimg from "./AccessStyle/user.png";
 import "./AccessStyle/Login.css";
+import Headers from "../Navigation/Header";
 
 function SignUp() {
 
@@ -61,40 +62,45 @@ function SignUp() {
     };
   
     return (
-    <div className="container">
-        <div className="header">
-            <div className="text">SignUp</div>
-            <div className="underline"></div>
+    <div className='login'>    
+        <Headers/>  
+        <div className='fill'></div>
+        <div className="container">
+            <div className="header">
+                <div className="text">SignUp</div>
+                <div className="underline"></div>
+            </div>
+
+            <form action="" onSubmit={handleSubmit}>
+                <div className="inputs">
+                    <div className="input">
+                        <img src={nameimg} alt="" />
+                        <input type="text" placeholder="Name" id="name" 
+                        value={user.name}
+                        onChange={handleChange} />
+                    </div>
+
+                    <div className="input">
+                    <img src={emailimg} alt="" />
+                        <input type="email" placeholder="Email Id" id="email"
+                        value={user.email}
+                        onChange={handleChange} />
+                    </div>
+
+                    <div className="input">
+                        <img src={passwordimg} alt="" />
+                        <input type="password" placeholder="Password" id="password"
+                        value={user.password}
+                        onChange={handleChange} />
+                    </div>
+                </div>
+
+                <div className="submit-container">
+                    <input className="submit" type="submit" value="SignUp" />
+                </div>
+            </form>
         </div>
-
-        <form action="" onSubmit={handleSubmit}>
-            <div className="inputs">
-                <div className="input">
-                    <img src={nameimg} alt="" />
-                    <input type="text" placeholder="Name" id="name" 
-                    value={user.name}
-                    onChange={handleChange} />
-                </div>
-
-                <div className="input">
-                <img src={emailimg} alt="" />
-                    <input type="email" placeholder="Email Id" id="email"
-                    value={user.email}
-                    onChange={handleChange} />
-                </div>
-
-                <div className="input">
-                    <img src={passwordimg} alt="" />
-                    <input type="password" placeholder="Password" id="password"
-                    value={user.password}
-                    onChange={handleChange} />
-                </div>
-            </div>
-
-            <div className="submit-container">
-                <input className="submit" type="submit" value="SignUp" />
-            </div>
-        </form>
+        <div className='fill'></div>
     </div>
     );
     

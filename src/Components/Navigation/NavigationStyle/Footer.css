@@ -1,0 +1,95 @@
+.footer{
+    background-color: #000e35;
+    color: white;
+    padding: 0;
+
+}
+.footer-top{
+    margin: 80px auto 10px auto ;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+.footer-left{
+    flex-basis: 48%;
+}
+
+.footer-left h3{
+    font-size: 30px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-left h3 img{
+    width: 50px;
+    margin-left: 30px;
+}
+
+.footer-left p{
+    max-width: 450px;
+    line-height: 1.5;
+}
+
+.footer-left ul li{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.footer-left ul li img{
+    width: 30px;
+    margin-right: 20px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+}
+
+.footer-right{
+    flex-basis: 48%;
+}
+
+.footer-right form label{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.footer-right form input, .footer-right form textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #EBECFE;
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    resize: none;
+    border-radius: 15px;
+}
+
+.footer-right span{
+    display: block;
+    margin: 20px 0;
+}
+
+.footer-bottom
+{
+    margin:10px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer-bottom ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+

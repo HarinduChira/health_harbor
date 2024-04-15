@@ -1,0 +1,38 @@
+.item{
+    width: 250px;
+    height: 280px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item h3{
+    margin: 6px 0;
+    text-align: center;
+}
+
+.item p{
+    margin: 6px 0;
+    text-align: center;
+}
+
+.view
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

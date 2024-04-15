@@ -1,0 +1,12 @@
+.products{
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.products ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
