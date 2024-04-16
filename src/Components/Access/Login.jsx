@@ -6,6 +6,8 @@ import axios from 'axios'
 import './AccessStyle/Login.css'
 import { useState } from 'react'
 import Header from '../Navigation/Header'
+import { NavLink } from 'react-router-dom'
+import Home from '../Pages/Home/Home'
 
 const Login = () => {
 
@@ -42,6 +44,8 @@ const Login = () => {
             });
 
             alert(res.data);
+
+            <Home userEmail={user.email}/>
 
         }
         catch (error) {
@@ -83,8 +87,13 @@ const Login = () => {
                 <div className="submit-container">
                     <input className='submit' type="submit" value="Login" />
                 </div>  
-            </form>  
+            </form> 
         </div>
+
+        <div className="message">
+                <p>New User? <NavLink to="/Signup"><span>SignUp</span></NavLink></p>
+        </div>
+
         <div className='fill'></div>
     </div>
   )

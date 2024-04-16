@@ -4,6 +4,7 @@ import passwordimg from "./AccessStyle/password.png";
 import nameimg from "./AccessStyle/user.png";
 import "./AccessStyle/Login.css";
 import Headers from "../Navigation/Header";
+import { NavLink } from "react-router-dom";
 
 function SignUp() {
 
@@ -20,6 +21,7 @@ function SignUp() {
             [e.target.id]: e.target.value,
         });
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -52,6 +54,8 @@ function SignUp() {
             });
 
             alert("SignUp Successful!");
+            
+            window.location.href = "/Login";
 
             
         }
@@ -93,12 +97,19 @@ function SignUp() {
                         value={user.password}
                         onChange={handleChange} />
                     </div>
+
                 </div>
 
                 <div className="submit-container">
                     <input className="submit" type="submit" value="SignUp" />
                 </div>
             </form>
+
+            <div className="message">
+                <p>Already have an account? <NavLink to="/Login"><span>Login</span></NavLink></p>
+            </div>
+
+
         </div>
         <div className='fill'></div>
     </div>

@@ -6,7 +6,7 @@ import Content from './Content/Content';
 import Title from './Title/Title';
 import About from './About/About';
 import Footer from '../../Navigation/Footer';
-const Home = () => {
+const Home = ({userEmail}) => {
 
   let heroData = [
       {text1: "Stay" , text2: "Healthy"},    
@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div id='home'>
-        <Header/> 
+        <Header userEmail={userEmail}/> 
         <Background/>
         <Hero
           heroData = {heroData[heroIndex]}
