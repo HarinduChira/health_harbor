@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Item from './Item';
 import './BrowseProducts.css';
 import Header from '../../Navigation/Header';
-import Footer from '../../Navigation/Footer';
 
 const BrowseProducts = () => {
     
@@ -25,10 +24,7 @@ const BrowseProducts = () => {
   return (
     <div className='page'>
         <Header/>
-        <br />
-        <br />
-        <br />
-        <br />
+        
 
         <div className="products">
             <h1>Pain Relievers</h1>
@@ -63,14 +59,11 @@ const BrowseProducts = () => {
                     .map(product => (
                     <li key={product.id}>
                         <Item name={product.name} price={product.price} image_url={product.image_url} />
+
                     </li>
                 ))}
             </ul>
         </div>
-
-        <Footer/>
-        
-      
     </div>
   )
 }

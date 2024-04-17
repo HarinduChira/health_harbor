@@ -35,7 +35,6 @@ const Home = ({userEmail}) => {
         <Content/>
         <About/>
         <Footer/>
-
     </div>
   )
 }
