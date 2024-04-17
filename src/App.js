@@ -1,5 +1,5 @@
 import './App.css';
-import Dashboard from './Components/Dashboard/Dashboard';
+import Dashboard from './Components/Pages/Admin/Manager/Dashboard/Dashboard';
 
 
 function App() {
