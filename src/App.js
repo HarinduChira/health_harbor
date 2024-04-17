@@ -6,6 +6,7 @@ import SignUp from './Components/Access/SignUp';
 import BrowseProducts from './Components/Pages/BrowseProducts/BrowseProducts';
 import Product from './Components/Pages/Product/Product';
 import Cart from './Components/Pages/Cart/Cart';
+import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Browse Products" element={<BrowseProducts/>} />
           <Route path="/Browse Products/:name" element={<Product />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Admin/Manager" element={<Landing/>}/>
         </Routes>
       </BrowserRouter>
     </div>
