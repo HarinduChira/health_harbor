@@ -1,0 +1,94 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #262626;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+.dark-nav{
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+.dark-nav .nav-item{
+    color: white;
+
+}
+
+.nav-logo{
+    font-family: Outfit;
+    font-size: 50px;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.nav-logo img{
+    height: 100px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 30px;
+    gap: 80px;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.nav-item{
+    color : #262626;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 1000;
+}
+ 
+.nav-item-signUp{
+    display: flex;
+    align-items: center;
+}
+
+.nav-item-signUp button{
+    display: flex;
+    border: 0;
+    background-color: white;
+    font-size: 30px;
+    font-weight: 1000;
+    color: #292929;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 5px 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-item-signUp button:hover{
+    background-color: #100797;
+}
+
+.nav-item-signUp img{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.nav-item-signUp p{
+    font-size: 30px;
+    font-weight: 1200;
+    color: #292929;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #262626;
+}

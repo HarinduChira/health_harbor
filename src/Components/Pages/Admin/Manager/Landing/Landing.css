@@ -1,0 +1,16 @@
+.page {
+    display: flex;
+    height: 1100px;
+  }
+  
+
+  .right-section {
+    flex-basis: 40%;
+  }
+  
+  
+
+  .left-section{
+    background-color: (180,229,140,255);
+    flex-basis: 60%;
+  }

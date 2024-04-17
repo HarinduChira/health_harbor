@@ -1,0 +1,88 @@
+.productDisplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 100px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    width: 80%;
+    margin-left: 200px;
+}
+
+.display-left{
+    flex-basis: 45%;
+    flex-direction: column;
+    width: 50%; 
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    padding: 10px;
+}
+
+.display-main-img{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.diplay-right{
+    flex-basis: 50%;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+.diplay-right h1{
+    margin-top: 20px;
+    font-weight: 1500;
+    font-size: 50px;
+}
+
+.des{
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.price{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.quantity p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.quantity label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.quantity input{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 50px;
+    height: 30px;
+}
+
+.addcart button{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(0, 43, 99);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.8);
+}
+

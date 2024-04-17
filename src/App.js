@@ -1,12 +1,30 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Dashboard from './Components/Pages/Admin/Manager/Dashboard/Dashboard';
-
+import Home from './Components/Pages/Home/Home';
+import Login from './Components/Access/Login';
+import SignUp from './Components/Access/SignUp';
+import BrowseProducts from './Components/Pages/BrowseProducts/BrowseProducts';
+import Product from './Components/Pages/Product/Product';
+import Cart from './Components/Pages/Cart/Cart';
+import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
+import ProductUpdate  from './Components/Pages/Admin/Manager/ProductUpdate/ProductUpdate';
 
 function App() {
   return (
     <div>
-      <Dashboard/>
-      
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login/>} />
+          <Route path="/SignUp" element={<SignUp/>} />
+          <Route path="/Browse Products" element={<BrowseProducts/>} />
+          <Route path="/Browse Products/:name" element={<Product />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Admin/Manager" element={<Landing/>}/>
+          <Route path='/Admin/Manager/ProductUpdate' element={<ProductUpdate/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
