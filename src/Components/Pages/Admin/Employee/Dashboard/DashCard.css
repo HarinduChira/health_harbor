@@ -1,0 +1,32 @@
+.body {
+    background-color: black;
+   }
+
+.card{
+    background-color: lightgray;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    font-family: 'poppins', sans-serif;
+    width: 50%;
+}
+
+.card button{
+    background-color: aquamarine;
+    color: black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    font-family: 'poppins', sans-serif;
+    width: 80%;
+}
+
+.card h1 {
+    color:black;
+    margin: 0;
+    font-size: 30px;
+}
