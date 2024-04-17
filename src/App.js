@@ -7,6 +7,7 @@ import BrowseProducts from './Components/Pages/BrowseProducts/BrowseProducts';
 import Product from './Components/Pages/Product/Product';
 import Cart from './Components/Pages/Cart/Cart';
 import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
+import ProductUpdate  from './Components/Pages/Admin/Manager/ProductUpdate/ProductUpdate';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Browse Products/:name" element={<Product />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Admin/Manager" element={<Landing/>}/>
+          <Route path='/Admin/Manager/ProductUpdate' element={<ProductUpdate/>}/>
         </Routes>
       </BrowserRouter>
     </div>
