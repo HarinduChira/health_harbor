@@ -7,7 +7,6 @@ import './AccessStyle/Login.css'
 import { useState } from 'react'
 import Header from '../Navigation/Header'
 import { NavLink } from 'react-router-dom'
-import Home from '../Pages/Home/Home'
 
 const Login = () => {
 
@@ -23,6 +22,8 @@ const Login = () => {
             [e.target.id]: e.target.value,
         });
     }
+
+    const[isLogged, setIsLogged] = useState(false);
 
 
     const handleLogin = async (e) =>{
@@ -43,9 +44,9 @@ const Login = () => {
                 password: "",
             });
 
-            alert(res.data);
+            setIsLogged(true);
 
-            <Home userEmail={user.email}/>
+            window.location.href = "/LoginSignUp/" + isLogged;
 
         }
         catch (error) {

@@ -8,8 +8,14 @@ import Product from './Components/Pages/Product/Product';
 import Cart from './Components/Pages/Cart/Cart';
 import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
 import ProductUpdate  from './Components/Pages/Admin/Manager/ProductUpdate/ProductUpdate';
+import LoginSignup from './Components/Pages/LoginSignUp/LoginSignup';
+
 
 function App() {
+
+  
+
+
   return (
     <div>
       <BrowserRouter>
@@ -17,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/SignUp" element={<SignUp/>} />
+          <Route path="/LoginSignUp/:isLogged" element={<LoginSignup />} />
           <Route path="/Browse Products" element={<BrowseProducts/>} />
           <Route path="/Browse Products/:name" element={<Product />} />
           <Route path="/Cart" element={<Cart />} />
