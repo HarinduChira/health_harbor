@@ -23,6 +23,7 @@ function App() {
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Admin/Manager" element={<Landing/>}/>
           <Route path='/Admin/Manager/ProductUpdate' element={<ProductUpdate/>}/>
+          <Route path='/Admin/Manager/Dashboard' element={<Dashboard/>}/>
         </Routes>
       </BrowserRouter>
     </div>
