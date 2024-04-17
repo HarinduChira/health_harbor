@@ -38,7 +38,7 @@ const ProductDisplay = (name) => {
         setItem({
             cus_email : cus_email,
             quantity : e.target.value,
-            date : new Date().toLocaleString()
+            date : new Date().getDay.toLocaleString()
         });
     }
 

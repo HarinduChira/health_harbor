@@ -5,21 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Item = (props) => {
 
-  // const testUser = "harinduchira@gmail.com";
-
-  // const [cartItems, setCartItems] = useState(
-  //   {
-  //     cus_email : "",
-  //     product_id : null,
-  //     product_name : "",
-  //     price : null,
-  //     image_url : "",
-  //     quantity : null,
-  //     date : ""  
-  //   }
-  // );
-
-
 
   return (
     <div className='item'>

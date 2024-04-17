@@ -4,10 +4,8 @@ import './Video.css'
 
 const Video = () => {
   return (
-      <video autoPlay loop muted  className='background'>
+      <video autoPlay loop muted  className='background-emp'>
         <source src={landing} type="video/mp4"/>
-    
-        Your browser does not support the video tag.
       </video>
   );
 }
