@@ -6,7 +6,8 @@ import Content from './Content/Content';
 import Title from './Title/Title';
 import About from './About/About';
 import Footer from '../../Navigation/Footer';
-const Home = ({userEmail}) => {
+
+const Home = ({logStatus}) => {
 
   let heroData = [
       {text1: "Stay" , text2: "Healthy"},    
@@ -24,7 +25,7 @@ const Home = ({userEmail}) => {
 
   return (
     <div id='home'>
-        <Header userEmail={userEmail}/> 
+        <Header logStatus={logStatus}/> 
         <Background/>
         <Hero
           heroData = {heroData[heroIndex]}
@@ -32,10 +33,9 @@ const Home = ({userEmail}) => {
           setHeroIndex = {setHeroIndex}
         />
         <Title subTitle='Our Products' title= 'What We Offer'/>
-        <Content/>
+        <Content logStatus={logStatus}/>
         <About/>
         <Footer/>
-
     </div>
   )
 }

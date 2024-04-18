@@ -20,10 +20,19 @@ const ProductDisplay = (name) => {
             date : ""  
         }
     );
+
+    let inputDate = new Date();
+
+    const getDateString = () => {
+
+        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
     
+        const formattedDate = inputDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
+
+        return formattedDate;
+    }    
 
     useEffect(() => {
-
         axios.get('http://localhost:8080/api/Products')
         .then(res => {
             console.log(res);
@@ -38,16 +47,12 @@ const ProductDisplay = (name) => {
         setItem({
             cus_email : cus_email,
             quantity : e.target.value,
-            date : new Date().toLocaleString()
+            date : getDateString()
         });
     }
 
-
-
     const addtocart = async (e) => {
         e.preventDefault();
-
-
 
         if (document.getElementById('quantity').value > product.stock) {
             alert("Not enough stock available");
@@ -71,27 +76,21 @@ const ProductDisplay = (name) => {
             console.log("Item Added To the Cart:", data);
 
             alert("Added to Cart Successfully!");
-            
-            window.location.href = "/Cart";
+     
+            alert(getDateString());
+
+            window.location.href = "/Browse Products";
 
         }
         catch (error) {
             console.error("Error sending data:", error);
         }
-
     }
-
-
-
-
 
   return (
 
     <div className='productDisplay'>
-
-
         <div className="display-left">
-            
             {product 
             .filter(product => product.name === name.name)
             .map(product => (
@@ -101,7 +100,6 @@ const ProductDisplay = (name) => {
             ))}            
         </div>
 
-        
         <div className="diplay-right">
 
             {product 

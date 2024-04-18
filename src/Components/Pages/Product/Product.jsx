@@ -7,7 +7,7 @@ const Product = () => {
 
   return (
     <div>
-      <Header/>
+      <Header logStatus={true}/>
       <ProductDisplay name = {window.location.pathname.split('/')[2]}/>
       <Footer/>
     </div>

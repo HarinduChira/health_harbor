@@ -1,19 +1,32 @@
 .page{
     background-color: rgba(255, 255, 255, 0.753);
+    position: relative ;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .products{
-    flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 100px;
     text-align: center;
+    width: 100%;
+    margin-bottom: 100px;
+    position: absolute;
+
 }
-
-
 
 .products ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
+
+.products ul li{
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+

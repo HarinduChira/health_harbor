@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll'
+
 import './NavigationStyle/Header.css'
 import logo from './NavigationStyle/HLogo.png'
 import { useEffect, useState } from 'react'
@@ -6,7 +6,7 @@ import React from 'react'
 import log from '../Pages/Home/Background/log.png'
 import { NavLink } from 'react-router-dom'
 
-const Header = ({userEmail}) => {
+const Header = ({logStatus}) => {
 
   const [sticky, setSticky] = useState(false);
 
@@ -15,6 +15,14 @@ const Header = ({userEmail}) => {
       window.scrollY > 500? setSticky(true):setSticky(false);
     })
   }, [])
+
+  const signLogout = () => {
+    if (logStatus) {
+      return "Log Out";                       
+    } else {
+      return "Sign Up"; 
+    }
+  }
 
   return ( 
     <div className={`nav ${sticky?'dark-nav':''}`}>
@@ -26,15 +34,14 @@ const Header = ({userEmail}) => {
 
       <ul className="nav-menu">
         <li className="nav-item"><NavLink to='/'>Home</NavLink></li>
-        <li className="nav-item"><NavLink to='/Browse Products'>Products</NavLink></li>
-        <li className="nav-item"><NavLink to='/'><Link to='about' smooth={true} offset={-100}  duration={500}>About</Link></NavLink></li>
-        <li className="nav-item"><NavLink to='/Cart'>Cart</NavLink></li>
-        <li className="nav-item"><Link to='footer' smooth={true} offset={-200}  duration={500}>Contact</Link></li>
+        {logStatus && <li className="nav-item"><NavLink to='/Browse Products'>Products</NavLink></li> }
+        {logStatus && <li className="nav-item"><NavLink to='/Cart'>Cart</NavLink></li> }
+        {logStatus && <li className="nav-item">Account</li> }
         <li className="nav-item-signUp" >
             <NavLink to="/SignUp" className="nav-link">
             <button>
             <img src={log} alt="" />
-            <p>Sign Up</p>              
+            <p>{signLogout()}</p>              
             </button>
             </NavLink>
               
