@@ -23,12 +23,32 @@ const Cart = () => {
 
   const removeFromCart = (product_id) => {
 
+    axios.delete(`http://localhost:8080/api/CusCartList/${product_id}`)
+    .then(res => {
+        console.log(res);
+        // setProduct(product.filter((product) => product.product_id !== product_id));
+    })
+    .catch(err => {
+        console.log(err);
+    })
+
   }
+
+  let inputDate = new Date();
+
+  const getDateString = () => {
+
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  
+      const formattedDate = inputDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
+
+      return formattedDate;
+  }  
 
   const calculateTotal = () => {
     let total = 0;                                  
     const filteredProducts = product              
-      .filter((product) => product.cus_email === "harinduchira@gmail.com");
+      .filter((product) => product.cus_email === "harinduchira@gmail.com" && product.date === getDateString());
   
     const mappedProducts = filteredProducts.map((product) => {
       const key = product.product_id;              
@@ -44,7 +64,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Header/>
+      <Header logStatus={true}/>
 
       <div className='cartitems'>
         <div className="cartitems-format-main">
@@ -58,7 +78,7 @@ const Cart = () => {
         <hr />
 
         {product
-            .filter((product) => product.cus_email === "harinduchira@gmail.com")
+            .filter((product) => product.cus_email === "harinduchira@gmail.com" && product.date === getDateString() )
             .map((product) => (
               <div className="cartitems-format cartitems-format-main"  key={product.product_id}>
               <img src={product.image_url} alt="" className='carticon-product-icon'/>

@@ -3,11 +3,9 @@ import Home from '../Home/Home'
 
 const LoginSignup = () => {
 
-  let logStatus = window.location.pathname.split('/')[2];
-
   return (
     <div>
-        <Home logStatus= {logStatus}/>
+        <Home logStatus= {true}/>
     </div>
   )
 }

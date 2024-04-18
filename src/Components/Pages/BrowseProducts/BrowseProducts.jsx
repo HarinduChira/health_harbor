@@ -23,7 +23,7 @@ const BrowseProducts = () => {
 
   return (
     <div className='page'>
-        <Header/>
+        <Header logStatus={true}/>
         
 
         <div className="products">
@@ -59,7 +59,6 @@ const BrowseProducts = () => {
                     .map(product => (
                     <li key={product.id}>
                         <Item name={product.name} price={product.price} image_url={product.image_url} />
-
                     </li>
                 ))}
             </ul>

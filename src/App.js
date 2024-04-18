@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/SignUp" element={<SignUp/>} />
-          <Route path="/LoginSignUp/:isLogged" element={<LoginSignup />} />
+          <Route path="/LoginSignUp" element={<LoginSignup logStatus={true}/>} />
           <Route path="/Browse Products" element={<BrowseProducts/>} />
           <Route path="/Browse Products/:name" element={<Product />} />
           <Route path="/Cart" element={<Cart />} />

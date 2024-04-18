@@ -62,7 +62,7 @@
 .cartitems-total-items{
     display: flex;
     justify-content: space-between;
-    padding: 15px 0px;
+    padding: 20px 0px;
 }
 
 .cartitems-total button{

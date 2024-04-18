@@ -23,9 +23,6 @@ const Login = () => {
         });
     }
 
-    const[isLogged, setIsLogged] = useState(false);
-
-
     const handleLogin = async (e) =>{
 
         e.preventDefault();
@@ -44,9 +41,7 @@ const Login = () => {
                 password: "",
             });
 
-            setIsLogged(true);
-
-            window.location.href = "/LoginSignUp/" + isLogged;
+            window.location.href = "/LoginSignUp";
 
         }
         catch (error) {
@@ -58,7 +53,7 @@ const Login = () => {
     return ( 
     
     <div className='login'>
-        <Header />
+        <Header  logStatus={false}/>
         <div className='fill'></div>
         <div className='container'>
             <div className="header">
