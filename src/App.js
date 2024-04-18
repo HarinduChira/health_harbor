@@ -15,12 +15,7 @@ import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
 import ProductUpdate  from './Components/Pages/Admin/Manager/ProductUpdate/ProductUpdate';
 import LoginSignup from './Components/Pages/LoginSignUp/LoginSignup';
 
-
-
 function App() {
-
-  
-
 
   return (
     <div>
