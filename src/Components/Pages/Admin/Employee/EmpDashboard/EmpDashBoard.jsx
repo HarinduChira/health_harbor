@@ -9,12 +9,12 @@ const EmpDashBoard = () => {
 
              <div className='left'>
                 <h1>Health Harbor</h1>
-                <div className='card'><DashCard name="Manage Medicine"/></div>
+                <div className='card'><DashCard name="Manage-Medicine"/></div>
               </div>
 
               <div className='right'>
-                <div className='card'><DashCard name="Request Medicine"/></div>
-                <div className='card'><DashCard name="Approve Requests"/></div>
+                <div className='card'><DashCard name="Request-Medicine"/></div>
+                <div className='card'><DashCard name="Approve-Requests"/></div>
               </div>
     </div>
   )

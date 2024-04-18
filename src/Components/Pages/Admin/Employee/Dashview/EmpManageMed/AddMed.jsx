@@ -1,6 +1,4 @@
-import { Description } from '@mui/icons-material';
 import React, { useState } from 'react';
-import './AddMed.css';
 
 const Form = () => {
   const [formData, setFormData] = useState({
