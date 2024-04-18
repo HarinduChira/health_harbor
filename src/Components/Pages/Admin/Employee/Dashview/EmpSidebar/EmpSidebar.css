@@ -30,14 +30,14 @@ align-items: center;
 }
 
 .row #icon{
-    flex: 10%;
+    flex: 20%;
     display: grid;
     place-items: center;
 
 }
 
 .row #title{
-    flex: 30%;
+    flex: 80%;
 }
 
 .Sidebar h1{
