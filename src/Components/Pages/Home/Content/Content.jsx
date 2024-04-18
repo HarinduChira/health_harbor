@@ -11,10 +11,12 @@ import syrup_icon from './syrup_icon.png'
 import drugs_icon from './drugs_icon.png'
 import supplement_icon from './supplement_icon.png'
 
-const Content = () => {
-  return ( 
+const Content = ({logStatus}) => {
+
+
+    return ( 
     <div className='contents'>
-        <div className="content">
+        <div className="content" >
             <img src={pills} alt="" />
             <div className="caption">
                 <img src={pills_icon} alt="" />

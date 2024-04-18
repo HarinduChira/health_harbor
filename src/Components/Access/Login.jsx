@@ -7,7 +7,6 @@ import './AccessStyle/Login.css'
 import { useState } from 'react'
 import Header from '../Navigation/Header'
 import { NavLink } from 'react-router-dom'
-import Home from '../Pages/Home/Home'
 
 const Login = () => {
 
@@ -23,7 +22,6 @@ const Login = () => {
             [e.target.id]: e.target.value,
         });
     }
-
 
     const handleLogin = async (e) =>{
 
@@ -43,9 +41,7 @@ const Login = () => {
                 password: "",
             });
 
-            alert(res.data);
-
-            <Home userEmail={user.email}/>
+            window.location.href = "/LoginSignUp";
 
         }
         catch (error) {
@@ -57,7 +53,7 @@ const Login = () => {
     return ( 
     
     <div className='login'>
-        <Header />
+        <Header  logStatus={false}/>
         <div className='fill'></div>
         <div className='container'>
             <div className="header">

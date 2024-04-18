@@ -46,7 +46,7 @@ function SignUp() {
 
             const data = await response.json();
             console.log("Data sent successfully:", data);
-
+            
             setUser({
                 name: "",
                 email: "",
@@ -56,8 +56,6 @@ function SignUp() {
             alert("SignUp Successful!");
             
             window.location.href = "/Login";
-
-            
         }
         catch (error) {
             console.error("Error sending data:", error);
