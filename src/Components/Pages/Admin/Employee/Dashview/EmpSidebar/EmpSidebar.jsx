@@ -5,6 +5,7 @@ import { EmpsidebarData } from './EmpsidebarData';
 export default function Sidebar() {
   return (
   <div className='Sidebar'>
+    <h1 >Health Harbor</h1>
     <ul className='Sidebarlist'>
       {EmpsidebarData.map((val,key) => {
       return (

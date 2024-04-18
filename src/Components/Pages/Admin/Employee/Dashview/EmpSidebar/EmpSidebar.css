@@ -39,3 +39,9 @@ align-items: center;
 .row #title{
     flex: 30%;
 }
+
+.Sidebar h1{
+    text-align: center;
+    color: aquamarine;
+    padding: 20px;
+}
