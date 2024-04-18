@@ -6,8 +6,10 @@ import SignUp from './Components/Access/SignUp';
 import BrowseProducts from './Components/Pages/BrowseProducts/BrowseProducts';
 import Product from './Components/Pages/Product/Product';
 import Cart from './Components/Pages/Cart/Cart';
-import EmpLanding from './Components/Pages/Admin/Employee/Landing/EmpLanding';
-import EmpDashBoard from './Components/Pages/Admin/Employee/Dashboard/EmpDashBoard';
+import EmpLanding from './Components/Pages/Admin/Employee/EmpLanding/EmpLanding';
+import EmpDashBoard from './Components/Pages/Admin/Employee/EmpDashboard/EmpDashBoard';
+import MedicineM from './Components/Pages/Admin/Employee/Dashview/EmpManageMed/MedicineM';
+import Sidebar from './Components/Pages/Admin/Employee/Dashview/EmpSidebar/EmpSidebar';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/Cart" element={<Cart />} />
           <Route path='/Admin/Employee' element={<EmpLanding/>}/>
           <Route path='/Admin/Employee/Dashboard' element={<EmpDashBoard />} />
+          <Route path='/Admin/Employee/ManageMed' element={<MedicineM />} />
+          <Route path='/SideBar' element={<Sidebar/>}/>
         </Routes>
       </BrowserRouter>
     </div>
