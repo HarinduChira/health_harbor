@@ -62,6 +62,31 @@ const BrowseProducts = () => {
                     </li>
                 ))}
             </ul>
+
+            <h1>Medical Equipment</h1>
+            <ul className='medicalEqupments'>                
+                {product
+                    .filter(product => product.category === 'Medical Equipment')                
+                    .map(product => (
+                    <li key={product.id}>
+                        <Item name={product.name} price={product.price} image_url={product.image_url} />
+                    </li>
+                    
+                ))}
+            </ul>
+
+            <h1>Pet Products</h1>
+            <ul className='pet'>                
+                {product
+                    .filter(product => product.category === 'Pet Products')                
+                    .map(product => (
+                    <li key={product.id}>
+                        <Item name={product.name} price={product.price} image_url={product.image_url} />
+                    </li>
+                    
+                ))}
+            </ul>
+
         </div>
     </div>
   )
