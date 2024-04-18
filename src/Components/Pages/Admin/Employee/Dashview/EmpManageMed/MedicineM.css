@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.maintable{
+  background-color: pink;
+  font-size: 25px;
+  display:flex;
+  justify-content:space-around; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 120px; /* Set height to viewport height for full-page effect */
+  border-collapse: collapse;
+  margin: 0px;
+}
+
+
+.content{
+    text-align: left
+}
+
+.add-button{
+    background-color: aquamarine;
+    color: black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'poppins', sans-serif;
+    width: 10%;
+}
+
+.content h2{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 70px;
+}
+
