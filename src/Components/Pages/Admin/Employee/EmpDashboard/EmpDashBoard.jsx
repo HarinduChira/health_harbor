@@ -6,10 +6,16 @@ import './EmpDashBoard.css';
 const EmpDashBoard = () => {
   return (
     <div className='dash'>
-                <div>Health Harbor</div>
-                <div><DashCard name="Manage Medicine"/></div>
-                <div><DashCard name="Request Medicine"/></div>
-                <div><DashCard name="Approve Requests"/></div>
+
+             <div className='left'>
+                <h1>Health Harbor</h1>
+                <div className='card'><DashCard name="Manage Medicine"/></div>
+              </div>
+
+              <div className='right'>
+                <div className='card'><DashCard name="Request Medicine"/></div>
+                <div className='card'><DashCard name="Approve Requests"/></div>
+              </div>
     </div>
   )
 }

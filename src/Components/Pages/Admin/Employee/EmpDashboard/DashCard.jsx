@@ -4,7 +4,7 @@ import './DashCard.css';
 const DashCard = ({name}) => {
   return (
     <div className='card'>
-    <h1>{name}</h1>
+    <h2>{name}</h2>
     <button>View</button>
   </div>
   )

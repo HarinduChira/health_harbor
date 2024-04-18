@@ -10,6 +10,7 @@ import EmpLanding from './Components/Pages/Admin/Employee/EmpLanding/EmpLanding'
 import EmpDashBoard from './Components/Pages/Admin/Employee/EmpDashboard/EmpDashBoard';
 import MedicineM from './Components/Pages/Admin/Employee/Dashview/EmpManageMed/MedicineM';
 import Sidebar from './Components/Pages/Admin/Employee/Dashview/EmpSidebar/EmpSidebar';
+import AddMed from './Components/Pages/Admin/Employee/Dashview/EmpManageMed/AddMed';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/Admin/Employee/Dashboard' element={<EmpDashBoard />} />
           <Route path='/Admin/Employee/ManageMed' element={<MedicineM />} />
           <Route path='/SideBar' element={<Sidebar/>}/>
+          <Route path='/ManageMed' element={<AddMed/>}/>
         </Routes>
       </BrowserRouter>
     </div>
