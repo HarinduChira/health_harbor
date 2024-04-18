@@ -4,29 +4,31 @@
 
 .card{
     background-color: lightgray;
-    border-radius: 25px;
-    padding-top: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 15px;
+    border-radius: 75px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
     font-family: 'poppins', sans-serif;
-    width: 50%;
+    width: 60%;
 }
 
 .card button{
     background-color: aquamarine;
     color: black;
+    border: 1px;
+    border-color: black;
     border-radius: 25px;
-    padding-top: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
     font-family: 'poppins', sans-serif;
-    width: 80%;
+    width: 60%;
 }
 
-.card h1 {
+.card h2 {
     color:black;
     margin: 0;
-    font-size: 30px;
+    font-size: 45px;
 }
