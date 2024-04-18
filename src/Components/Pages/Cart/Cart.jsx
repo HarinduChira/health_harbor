@@ -26,12 +26,27 @@ const Cart = () => {
     axios.delete(`http://localhost:8080/api/CusCartList/${product_id}`)
     .then(res => {
         console.log(res);
-        // setProduct(product.filter((product) => product.product_id !== product_id));
+        alert('Product Removed from Cart');
+
+        const updatedProducts = product.filter(item => item.product_id !== product_id);
+        setProduct(updatedProducts);
+
     })
     .catch(err => {
         console.log(err);
     })
 
+  }
+
+  const handleUpdateCart = () => {
+    axios.get('http://localhost:8080/api/CusCartList')
+      .then(res => {
+        console.log(res);
+        setProduct(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   let inputDate = new Date();
@@ -86,12 +101,17 @@ const Cart = () => {
               <p>Rs. {product.price}</p>
               <button className='cartitems-qunatity'>{product.quantity}</button>
               <p>Rs. {product.price * product.quantity}</p>
-              <button className='cartitems-remove-button' onClick={() => removeFromCart(product.product_id)}>Remove</button>
+              <button className='cartitems-remove-button' onClick={() => 
+                removeFromCart(product.product_id)}>Remove</button>
             </div>
           ))
         }
 
         <hr />
+
+        <div className="cartitems-updateCart">
+          <button onClick={handleUpdateCart}>UPDATE CART</button>
+        </div>
 
         <div className="cartitems-down">
           <div className="cartitems-total">
