@@ -1,7 +1,7 @@
 import React from 'react'
 import EmpDashCard from '../EmpDashCard/EmpDashCard'
 
-const EmpDashBoard = () => {
+const EmployeeDashBoard = () => {
   return (
     <div className='mg-dashboard'>
         <div className='mg-dashboard-left'>
@@ -27,4 +27,4 @@ const EmpDashBoard = () => {
   )
 }
 
-export default EmpDashBoard
+export default EmployeeDashBoard

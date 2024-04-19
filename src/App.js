@@ -9,8 +9,8 @@ import Cart from './Components/Pages/Cart/Cart';
 import LoginSignup from './Components/Pages/LoginSignUp/LoginSignup';
 
 import EmpLanding from './Components/Pages/Admin/Employee/EmpLanding/EmpLanding';
-import EmpDashBoard from './Components/Pages/Admin/Employee/EmpDashBoard/EmpDashBoard/EmpDashBoard';
 import EmpDashView from './Components/Pages/Admin/Employee/EmpDashView/EmpDashView';
+import EmployeeDashBoard from './Components/Pages/Admin/Employee/EmpDashBoard/EmpDashBoard/EmployeeDashBoard';
 
 import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
 import ManagerDashBoard from './Components/Pages/Admin/Manager/ManagerDashBoard/ManagerDashBoard/ManagerDashBoard';
@@ -19,6 +19,7 @@ import ManagerDashView from './Components/Pages/Admin/Manager/ManagerDashView/Ma
 import SupLanding from './Components/Pages/Supplier/SupLanding/SupLanding';
 import SupDashBoard from './Components/Pages/Supplier/SupDashBoard/SupDashBoard/SupDashBoard';
 import SupDashView from './Components/Pages/Supplier/SupDashView/SupDashView';
+
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
           <Route path="/Cart" element={<Cart />} />
           
           <Route path='/Admin/Employee' element={<EmpLanding/>}/>
-          <Route path='/Admin/Employee/EmpDashboard' element={<EmpDashBoard />} />
+          <Route path='/Admin/Employee/EmpDashboard' element={<EmployeeDashBoard/>} />
           <Route path='/Admin/Employee/EmpDashboard/EmpDashView/ManageMedicine' element={<EmpDashView selectMenu="ManageMedicine"/>}/>
           <Route path='/Admin/Employee/EmpDashboard/EmpDashView/RequestMedicine' element={<EmpDashView selectMenu="RequestMedicine" />}/>
           <Route path='/Admin/Employee/EmpDashboard/EmpDashView/ApproveCusOrder' element={<EmpDashView selectMenu="ApproveCusOrder" />}/>
