@@ -15,8 +15,9 @@ import Sidebar from './Components/Pages/Admin/Employee/Dashview/EmpSidebar/EmpSi
 import AddMed from './Components/Pages/Admin/Employee/Dashview/EmpManageMed/AddMed';
 
 import Landing from './Components/Pages/Admin/Manager/Landing/Landing'
-import ProductUpdate  from './Components/Pages/Admin/Manager/ProductUpdate/ProductUpdate';
 import LoginSignup from './Components/Pages/LoginSignUp/LoginSignup';
+import ManagerDashBoard from './Components/Pages/Admin/Manager/ManagerDashBoard/ManagerDashBoard/ManagerDashBoard';
+import ManagerDashView from './Components/Pages/Admin/Manager/ManagerDashView/ManagerDashView';
 
 function App() {
 
@@ -36,8 +37,13 @@ function App() {
           <Route path='/Admin/Employee/ManageMed' element={<MedicineM />} />
           <Route path='/SideBar' element={<Sidebar/>}/>
           <Route path='/ManageMed' element={<AddMed/>}/>
+
+
           <Route path="/Admin/Manager" element={<Landing/>}/>
-          <Route path='/Admin/Manager/ProductUpdate' element={<ProductUpdate/>}/>
+          <Route path='/Admin/Manager/ManagerDashBoard' element={<ManagerDashBoard/>}/>
+          <Route path='/Admin/Manager/ManagerDashBoard/ManagerDashView/ManageEmployee' element={<ManagerDashView  selectMenu = "ManageEmployee"/>}/>
+          <Route path='/Admin/Manager/ManagerDashBoard/ManagerDashView/ApproveUpdates' element={<ManagerDashView selectMenu = "ApproveUpdates"/>}/>
+          <Route path='/Admin/Manager/ManagerDashBoard/ManagerDashView/ManagerDash' element={<ManagerDashView selectMenu = "ManagerDash"/>}/>
 
         </Routes>
       </BrowserRouter>

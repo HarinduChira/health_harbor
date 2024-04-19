@@ -1,0 +1,28 @@
+.managerDashView{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #773f3f;
+}
+
+.managerDashView-SideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 20%;
+    background-color: #543f77;
+}
+
+.managerDashView-Right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 80%;
+    background-color: #3f7777;
+}

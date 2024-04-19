@@ -4,27 +4,25 @@ import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-export const EmpsidebarData =[
+export const ManagerSideBarData =[
     {
-        title: 'Manage Medicine',
+        titile: 'DashBoard',
         icon: <ManageSearchIcon/>,
-        link: "/EmpMangeMed"
+        link: "/Admin/Manager/ManagerDashBoard/ManagerDashView/ManagerDash"
     },
     {
-        title: 'Request Medicine',
+        titile: 'Manage Employees',
         icon: <MedicalServicesIcon/>,
-        link: "/"
+        link: "/Admin/Manager/ManagerDashBoard/ManagerDashView/ManageEmployee"
     },
     {
-        title: 'Approve Request',
+        titile: 'Approve Updates',
         icon: <HowToRegIcon/>,
-        link: "/"
+        link: "/Admin/Manager/ManagerDashBoard/ManagerDashView/ApproveUpdates"
     },
     {
-        title: 'Log Out',
+        titile: 'Log Out',
         icon: <LogoutIcon/>,
-        link: "/"
+        link: "/Admin/Manager"
     },
 ]
-
- 

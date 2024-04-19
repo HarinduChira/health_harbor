@@ -1,0 +1,31 @@
+.mg-dash-card{
+    background-color: rgb(135, 129, 129);
+    border-radius: 50px;
+    height: 250px;
+    width: 300px;
+    font-family: 'poppins', sans-serif;
+    margin: 20px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.mg-dash-card h2 {
+    color:black;
+    font-size: 45px;    
+}
+
+.mg-dash-card button{
+    background-color: aquamarine;
+    color: black;
+    border: 3px solid black;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+
