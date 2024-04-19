@@ -4,27 +4,25 @@ import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-export const EmpsidebarData =[
+export const EmpSideBarData = [
     {
-        title: 'Manage Medicine',
+        titile: 'Manage Medicine',
         icon: <ManageSearchIcon/>,
-        link: "/EmpMangeMed"
+        link: "/Admin/Employee/EmpDashboard/EmpDashView/ManageMedicine"
     },
     {
-        title: 'Request Medicine',
+        titile: 'Request Medicine',
         icon: <MedicalServicesIcon/>,
-        link: "/"
+        link: "/Admin/Employee/EmpDashboard/EmpDashView/RequestMedicine"
     },
     {
-        title: 'Approve Request',
+        titile: 'Approve Orders',
         icon: <HowToRegIcon/>,
-        link: "/"
+        link: "/Admin/Employee/EmpDashboard/EmpDashView/ApproveCusOrder"
     },
     {
-        title: 'Log Out',
+        titile: 'Log Out',
         icon: <LogoutIcon/>,
-        link: "/"
+        link: "/Admin/Employee"
     },
 ]
-
- 
