@@ -7,7 +7,7 @@ const ManagerDashView = ({selectMenu}) => {
   return (
     <div className='managerDashView'>
         <div className="managerDashView-SideBar">
-          <ManagerSideBar selectMenu={selectMenu}/>
+          <ManagerSideBar/>
         </div>
         <div className="managerDashView-Right">
           <ManagerDashViewData selectMenu={selectMenu}/>

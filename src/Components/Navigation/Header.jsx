@@ -33,7 +33,7 @@ const Header = ({logStatus}) => {
       </div>
 
       <ul className="nav-menu">
-        <li className="nav-item"><NavLink to='/'>Home</NavLink></li>
+        {logStatus && <li className="nav-item"><NavLink to='/Home'>Home</NavLink></li> }
         {logStatus && <li className="nav-item"><NavLink to='/Browse Products'>Products</NavLink></li> }
         {logStatus && <li className="nav-item"><NavLink to='/Cart'>Cart</NavLink></li> }
         {logStatus && <li className="nav-item">Account</li> }
