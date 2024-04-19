@@ -13,7 +13,7 @@ const SupDashCard = ({name}) => {
                 if(name === 'Manage Stock'){
                   window.location.href = '/Supplier/SupplierDashBoard/SupplierDashView/ManageStock'
                 } else if(name === 'Approve Request'){
-                  window.location.href = '/Supplier/SupplierDashBoard/SupplierDashView/ApproveRequests'
+                  window.location.href = '/Supplier/SupplierDashBoard/SupplierDashView/ApproveRequest'
                 } else if(name === 'Log Out'){
                   window.location.href = '/Supplier'
                 }
