@@ -87,7 +87,7 @@ const Login = () => {
         </div>
 
         <div className="message">
-                <p>New User? <NavLink to="/Signup"><span>SignUp</span></NavLink></p>
+                <p className="message-p">New User? <NavLink to="/Signup"><span>SignUp</span></NavLink></p>
         </div>
 
         <div className='fill'></div>

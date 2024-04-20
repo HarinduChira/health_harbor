@@ -93,4 +93,19 @@
     margin-right: 20px;
 }
 
+.submit-btn{
+    background-color: #efdc57;
+    color: #000e35;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.footer-q{
+    color: white;
+}
 

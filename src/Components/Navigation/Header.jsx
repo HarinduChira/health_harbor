@@ -32,12 +32,12 @@ const Header = ({logStatus}) => {
         Health Harbor
       </div>
 
-      <ul className="nav-menu">
-        {logStatus && <li className="nav-item"><NavLink to='/Home'>Home</NavLink></li> }
-        {logStatus && <li className="nav-item"><NavLink to='/Browse Products'>Products</NavLink></li> }
-        {logStatus && <li className="nav-item"><NavLink to='/Cart'>Cart</NavLink></li> }
+      <ul className="nav-menu ">
+        {logStatus && <li className="nav-item"><NavLink to='/Home' className= "nav-link">Home</NavLink></li> }
+        {logStatus && <li className="nav-item"><NavLink to='/Browse Products' className= "nav-link">Products</NavLink></li> }
+        {logStatus && <li className="nav-item"><NavLink to='/Cart' className= "nav-link">Cart</NavLink></li> }
         {logStatus && <li className="nav-item">Account</li> }
-        <li className="nav-item-signUp" >
+        <li className={`${logStatus ? 'nav-item-signUp' : 'nav-item-signUp-side'}`}>
             <NavLink to="/SignUp" className="nav-link">
             <button>
             <img src={log} alt="" />

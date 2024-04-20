@@ -1,10 +1,10 @@
 .login{
-    background: linear-gradient(#2A00B7,#42006C);
+    background: linear-gradient(#0e2051,#6c621a);
 }
 
 .fill{
     width: 100%;
-    height: 220px;
+    height: 160px;
 }
 
 .container{
@@ -117,8 +117,15 @@
     font-size: 18px;
 }
 
+.message-p{
+    margin-right: 10px;
+    color: #fff;
+    font-size: 20px;
+
+}
+
 .message span{
-    color: #b5e90b;
+    color: #efdc57;
     font-size: 25px;
     cursor: pointer;
     text-decoration: none;

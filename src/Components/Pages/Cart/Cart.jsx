@@ -87,10 +87,10 @@ const Cart = () => {
             .map((product) => (
               <div className="cartitems-format cartitems-format-main"  key={product.product_id}>
               <img src={product.image_url} alt="" className='carticon-product-icon'/>
-              <p>{product.product_name}</p>
-              <p>Rs. {product.price}</p>
+              <p className='cart-p'>{product.product_name}</p>
+              <p className='cart-p'>Rs. {product.price}</p>
               <button className='cartitems-qunatity'>{product.quantity}</button>
-              <p>Rs. {product.price * product.quantity}</p>
+              <p className='cart-p'>Rs. {product.price * product.quantity}</p>
               <button className='cartitems-remove-button' onClick={() => 
                 removeFromCart(product.product_id)}>Remove</button>
             </div>

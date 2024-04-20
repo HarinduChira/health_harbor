@@ -104,7 +104,7 @@ function SignUp() {
             </form>
 
             <div className="message">
-                <p>Already have an account? <NavLink to="/Login"><span>Login</span></NavLink></p>
+                <p className="message-p">Already have an account? <NavLink to="/Login"><span>Login</span></NavLink></p>
             </div>
 
 

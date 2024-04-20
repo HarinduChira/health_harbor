@@ -49,7 +49,7 @@ const Item = (props) => {
   return (
     <div className='item'>
       <div className="item-data">
-        <Link to={`/Browse Products/${props.name}`}>
+        <Link to={`/Browse Products/${props.name}`} className='item-link'>
           <img src={props.image_url} alt='' />
           <h3>{props.name}</h3>
           <p>Rs. {props.price}</p>

@@ -39,26 +39,24 @@ const Footer = () => {
                     <h3>Send Us a Message 
                         <img src={message} alt="" />
                     </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Necessitatibus obcaecati ad nobis repellat et eos odit
-                        molestias ipsum quibusdam! Ullam voluptatum culpa assumenda,
-                        accusamus repellendus quam amet ipsam deserunt totam?</p>
+                    <p className='footer-q'>Questions? Assistance needed? 
+                        <br />Contact Health Harbor! Reach our friendly support team via email at support@healthharbor.com or through our website's contact form. Your satisfaction is our priority. Let's keep you on the path to wellness together!</p>
 
                     <ul>
                         <li>
                             <img src={email} alt="" />
-                            harinduChira@gmail.com
+                            support@healthharbor.com
                         </li>
                         <li>
                             <img src={phone} alt="" />
-                            0710451326
+                            011 234 5678
                         </li>
                         <li>
                             <img src={location} alt="" />    
-                            152/1 <br />
-                            Eksath Mawatha <br />
-                            Mahara <br />
-                            Kadawatha
+                            No 10 <br />
+                            Park Street <br />
+                            Colombo 02 <br />
+                            Sri Lanka
                         </li>
                     </ul>
                 </div>
@@ -67,13 +65,13 @@ const Footer = () => {
                         <label>Your Name</label>
                         <input type="text" name='name' placeholder="Enter your name" required/>
 
-                        <label>Phone Number</label>
-                        <input type="tel" name='phone' placeholder="Enter your mobile number" required/>
+                        <label>Your Email</label>
+                        <input type="email" name='email' placeholder="Enter your Email Address" required/>
 
                         <label>Write Your Message Here</label>
                         <textarea name="message" rows="6" placeholder="Write your message here" required></textarea>
 
-                        <button type="submit" className='btn dark-btn'>Send Message</button>
+                        <button type="submit" className='submit-btn'>Send Message</button>
                     </form>
 
                     <span>{result}</span>
@@ -84,7 +82,7 @@ const Footer = () => {
             <hr />
 
             <div className="footer-bottom">
-                <p>&copy; 2024 Harindu Chira. All Rights Reserved.</p>
+                <p  className='footer-q'>&copy; 2024 Health Harbor. All Rights Reserved.</p>
                 <ul>
                     <li>Terms of Services</li>
                     <li>Privacy policy</li>
