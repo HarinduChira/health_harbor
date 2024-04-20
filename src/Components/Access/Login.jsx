@@ -41,7 +41,7 @@ const Login = () => {
                 password: "",
             });
 
-            window.location.href = "/LoginSignUp";
+            window.location.href = "/Customer/LogCusLanding";
 
         }
         catch (error) {

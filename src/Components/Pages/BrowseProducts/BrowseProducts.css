@@ -1,5 +1,5 @@
 .page{
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: #edda4f;
     position: relative ;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,19 @@
     width: 100%;
     margin-bottom: 100px;
     position: absolute;
-
+    background-color: #edda4f;
 }
+
+.products h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-weight: bolder;
+    box-shadow: 0 0 10px 0 #000;
+}
+
 
 .products ul{
     display: flex;
@@ -24,7 +35,7 @@
     margin-bottom: 100px;
 }
 
-.products ul li{
+.products li{
     padding: 20px;
     width: 300px;
     border-radius: 10px;

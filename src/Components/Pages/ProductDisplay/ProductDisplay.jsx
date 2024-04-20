@@ -1,63 +1,49 @@
-import React from 'react'
-import './ProductDisplay.css'
+import React, { useEffect, useState } from 'react';
+import './ProductDisplay.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 
-const ProductDisplay = (name) => {
-
+const ProductDisplay = ({ name }) => {
     const cus_email = "harinduchira@gmail.com";
-
-    const[product, setProduct] = useState([]);
-
-    const[item, setItem] = useState(
-        {
-            cus_email : "",
-            product_id : null,
-            product_name : "",
-            price : null,
-            image_url : "",
-            quantity : null,
-            date : ""  
-        }
-    );
-
-    let inputDate = new Date();
-
-    const getDateString = () => {
-
-        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-    
-        const formattedDate = inputDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
-
-        return formattedDate;
-    }    
+    const [product, setProduct] = useState(null);
+    const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
         axios.get('http://localhost:8080/api/Products')
-        .then(res => {
-            console.log(res);
-            setProduct(res.data);
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }, []);
+            .then(res => {
+                const filteredProduct = res.data.find(p => p.name === name);
+                setProduct(filteredProduct);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, [name]);
+
+    const getDateString = () => {
+        const inputDate = new Date();
+        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+        return inputDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
+    };
 
     const handleInput = (e) => {
-        setItem({
-            cus_email : cus_email,
-            quantity : e.target.value,
-            date : getDateString()
-        });
-    }
+        setQuantity(parseInt(e.target.value));
+    };
 
-    const addtocart = async (e) => {
+    const addToCart = async (e) => {
         e.preventDefault();
-
-        if (document.getElementById('quantity').value > product.stock) {
+        if (quantity > product.stock) {
             alert("Not enough stock available");
             return;
         }
+
+        const item = {
+            cus_email: cus_email,
+            product_id: product.product_id,
+            product_name: product.name,
+            price: product.price,
+            image_url: product.image_url,
+            quantity: quantity,
+            date: getDateString()
+        };
 
         try {
             const response = await fetch("http://localhost:8080/api/CusCartList/addCusCartItem", {
@@ -69,70 +55,55 @@ const ProductDisplay = (name) => {
             });
 
             if (!response.ok) {
-                throw new Error("An error occurred");
+                throw new Error("An error occurred while adding the item to the cart");
             }
 
-            const data = await response.json();
-            console.log("Item Added To the Cart:", data);
-
             alert("Added to Cart Successfully!");
-     
-            alert(getDateString());
-
             window.location.href = "/Browse Products";
-
         }
         catch (error) {
-            console.error("Error sending data:", error);
+            console.error("Error adding item to cart:", error);
+            alert("Failed to add item to cart. Please try again later.");
         }
+    };
+
+    if (!product) {
+        return <div>Loading...</div>;
     }
 
-  return (
-
-    <div className='productDisplay'>
-        <div className="display-left">
-            {product 
-            .filter(product => product.name === name.name)
-            .map(product => (
-
-            <img className="display-main-img" src={product.image_url} alt='' />       
-                    
-            ))}            
-        </div>
-
-        <div className="diplay-right">
-
-            {product 
-            .filter(product => product.name === name.name)
-            .map(product => (
-
-            <div onLoad={item.image_url = product.image_url}>            
-                <h1 onLoad={item.product_id = product.product_id}>{product.name}</h1>
-                <p className='des' onLoad={item.product_name = product.name}>
-                    <b>Description</b> <br />
-                    {product.description}
-                </p>
-                <p className='price'  onLoad={item.price = product.price}>Price : Rs. {product.price} </p>
-                
-                <form action="" className='addcart' >
-                    <div className="quantity">
-                        <p>Available Stock : {product.stock}</p>
-                        <label>Quantity</label>
-                        <input type="number" defaultValue={1} min="1" max="20" id='quantity'
-                            onChange={handleInput}
-                        />
-                    </div>
-                    <button onClick={addtocart} >Add to Cart</button>
-                </form>
-                {/* <p>{product.reviews}</p> */}
+    return (
+        <div className='productDisplay'>
+            <div className="display-left">
+                <img className="display-main-img" src={product.image_url} alt='' />
             </div>
-                     
-            ))}
-        </div>
-      
-    </div>
-    
-  )
-}
 
-export default ProductDisplay
+            <div className="diplay-right">
+                <div>
+                    <h1>{product.name}</h1>
+                    <p className='des'>
+                        <b>Description</b> <br />
+                        {product.description}
+                    </p>
+                    <p className='price'>Price : Rs. {product.price}</p>
+
+                    <form className='addcart'>
+                        <div className="quantity">
+                            <p>Available Stock : {product.stock}</p>
+                            <label>Quantity</label>
+                            <input
+                                type="number"
+                                value={quantity}
+                                min="1"
+                                max={product.stock}
+                                onChange={handleInput}
+                            />
+                        </div>
+                        <button onClick={addToCart}>Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ProductDisplay;

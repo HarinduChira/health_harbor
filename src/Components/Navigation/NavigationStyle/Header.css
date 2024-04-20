@@ -1,19 +1,19 @@
 .nav{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     color: #262626;
-    position: fixed;
+    position: absolute;
     top: 0;
-    width: 95%;
-    margin-left: 50px;
-    margin-bottom: 100px;
+    width: 99vmax;
+    text-align: center;
+    background-color: #edda4f;
 }
 
 .dark-nav{
     color: white;
-    border-radius: 10px;
-    background-color: rgb(0,0,0,0.3);
+    background-color: rgb(0,0,0,0.8);
     transition: 0.5s;
 }
 
@@ -26,10 +26,10 @@
     font-family: Outfit;
     font-size: 50px;
     font-weight: 900;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 50px;
+    width: 30%;
 }
 
 .nav-logo img{
@@ -41,39 +41,43 @@
     align-items: center;
     list-style: none;
     font-size: 30px;
-    gap: 80px;
+    gap: 100px;
     font-weight: 900;
-    margin-right: 10px;
+    width: 70%;
+    justify-content:center;
 }
+
 
 .nav-item{
     color : #262626;
     font-size: 30px;
     cursor: pointer;
-    font-weight: 1000;
+    font-weight: 900;
 }
  
 .nav-item-signUp{
     display: flex;
     align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .nav-item-signUp button{
     display: flex;
     border: 0;
-    background-color: white;
-    font-size: 30px;
-    font-weight: 1000;
-    color: #292929;
+    background-color: rgb(220, 188, 8);
+    font-size: 32px;
+    font-weight: 900;
+    padding: 5px 20px;
+    color: #000000;
     cursor: pointer;
     border-radius: 30px;
-    padding: 5px 10px;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .nav-item-signUp button:hover{
-    background-color: #100797;
+    background-color: #e2e1eb;
 }
 
 .nav-item-signUp img{

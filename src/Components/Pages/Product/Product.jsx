@@ -8,7 +8,7 @@ const Product = () => {
   return (
     <div>
       <Header logStatus={true}/>
-      <ProductDisplay name = {window.location.pathname.split('/')[2]}/>
+      <ProductDisplay name = {decodeURIComponent(window.location.pathname.split('/').pop())}/>
       <Footer/>
     </div>
   )

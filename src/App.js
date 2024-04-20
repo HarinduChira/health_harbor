@@ -6,7 +6,6 @@ import SignUp from './Components/Access/SignUp';
 import BrowseProducts from './Components/Pages/BrowseProducts/BrowseProducts';
 import Product from './Components/Pages/Product/Product';
 import Cart from './Components/Pages/Cart/Cart';
-import LoginSignup from './Components/Pages/LoginSignUp/LoginSignup';
 
 import EmpLanding from './Components/Pages/Admin/Employee/EmpLanding/EmpLanding';
 import EmpDashView from './Components/Pages/Admin/Employee/EmpDashView/EmpDashView';
@@ -19,6 +18,8 @@ import ManagerDashView from './Components/Pages/Admin/Manager/ManagerDashView/Ma
 import SupLanding from './Components/Pages/Supplier/SupLanding/SupLanding';
 import SupDashBoard from './Components/Pages/Supplier/SupDashBoard/SupDashBoard/SupDashBoard';
 import SupDashView from './Components/Pages/Supplier/SupDashView/SupDashView';
+import CusLanding from './Components/Pages/Customer/CusLanding/CusLanding';
+import LogCusLanding from './Components/Pages/Customer/LogCusLanding/LogCusLanding';
 
 
 
@@ -31,10 +32,12 @@ function App() {
           <Route path="/Home" element={<Home  logStatus={true}/>} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/SignUp" element={<SignUp/>} />
-          <Route path="/LoginSignUp" element={<LoginSignup logStatus={true}/>} />
           <Route path="/Browse Products" element={<BrowseProducts/>} />
           <Route path="/Browse Products/:name" element={<Product />} />
           <Route path="/Cart" element={<Cart />} />
+
+          <Route path="/Customer" element={<CusLanding/>} />
+          <Route path="/Customer/LogCusLanding" element={<LogCusLanding/>}/>
           
           <Route path='/Admin/Employee' element={<EmpLanding/>}/>
           <Route path='/Admin/Employee/EmpDashboard' element={<EmployeeDashBoard/>} />

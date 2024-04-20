@@ -38,17 +38,6 @@ const Cart = () => {
 
   }
 
-  const handleUpdateCart = () => {
-    axios.get('http://localhost:8080/api/CusCartList')
-      .then(res => {
-        console.log(res);
-        setProduct(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  }
-
   let inputDate = new Date();
 
   const getDateString = () => {
@@ -78,7 +67,8 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <div className='main-cart'>
+
       <Header logStatus={true}/>
 
       <div className='cartitems'>
@@ -109,10 +99,6 @@ const Cart = () => {
 
         <hr />
 
-        <div className="cartitems-updateCart">
-          <button onClick={handleUpdateCart}>UPDATE CART</button>
-        </div>
-
         <div className="cartitems-down">
           <div className="cartitems-total">
             <h1>Cart Totals </h1>
@@ -136,8 +122,6 @@ const Cart = () => {
             <button>PROCEED TO CHECKOUT</button>
           </div>
         </div>
-
-
       </div>  
       <Footer/>
     </div>

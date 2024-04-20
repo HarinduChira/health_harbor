@@ -13,38 +13,77 @@ import supplement_icon from './supplement_icon.png'
 
 const Content = ({logStatus}) => {
 
-
     return ( 
     <div className='contents'>
-        <div className="content" >
+        <div className="content" onClick={
+                () => {
+                    if(logStatus){
+                        window.location.href = '/Browse Products'
+                    }else{
+                        window.location.href = '/Login'
+                    }
+                }
+            }>
             <img src={pills} alt="" />
             <div className="caption">
                 <img src={pills_icon} alt="" />
                 <p>Pills</p>
             </div>
         </div>
-        <div className="content">
+        <div className="content" onClick={
+                () => {
+                    if(logStatus){
+                        window.location.href = '/Browse Products'
+                    }else{
+                        window.location.href = '/Login'
+                    }
+                }
+            }>
             <img src={syrup} alt="" />
             <div className="caption">
                 <img src={syrup_icon} alt="" />
                 <p>Syrup</p>
             </div>
         </div>
-        <div className="content">
+        <div className="content" onClick={
+                () => {
+                    if(logStatus){
+                        window.location.href = '/Browse Products'
+                    }else{
+                        window.location.href = '/Login'
+                    }
+                }
+            }>
             <img src={tablet} alt="" />
             <div className="caption">
                 <img src={tablet_icon} alt="" />
                 <p>Tablets</p>
             </div>
         </div>
-        <div className="content">
+        <div className="content" onClick={
+                () => {
+                    if(logStatus){
+                        window.location.href = '/Browse Products'
+                    }else{
+                        window.location.href = '/Login'
+                    }
+                }
+            }>
             <img src={supplement} alt="" />
             <div className="caption">
                 <img src={supplement_icon} alt="" />
                 <p>Supplements</p>
             </div>
         </div>
-        <div className="content">
+        <div className="content" onClick={
+                () => {
+                    if(logStatus){
+                        window.location.href = '/Browse Products'
+                    }else{
+                        window.location.href = '/Login'
+                    }
+                }
+            }>
             <img src={drugs} alt="" />
             <div className="caption">
                 <img src={drugs_icon} alt="" />
