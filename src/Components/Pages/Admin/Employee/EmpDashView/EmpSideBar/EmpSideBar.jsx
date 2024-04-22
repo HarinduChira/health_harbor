@@ -4,7 +4,7 @@ import { EmpSideBarData } from './EmpSideBarData';
 const EmpSideBar = () => {
   return (
     <div>
-                <h1 >Health Harbor</h1>
+                <h1 className='sideBar-h1'>Health Harbor <br /> Employee</h1>
     
     <ul className='Sidebarlist'>
         {EmpSideBarData.map((val,key) => {

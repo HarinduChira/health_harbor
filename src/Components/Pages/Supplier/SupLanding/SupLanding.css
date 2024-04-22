@@ -15,13 +15,14 @@
 
 }
 
-.supLanding-Main-Left p{
+.supLanding-Main-Left-p{
     display: flex;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bold;
-    color: rgb(92, 92, 18);
+    color: #000e35;
     width: 100%;
     height: 15vh;
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -40,5 +41,6 @@
     align-items: center;
     width: 40%;
     height: 100%;
-    background: linear-gradient(#2A00B7,#42006C);
+    background: white;
+
 }

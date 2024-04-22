@@ -48,8 +48,8 @@ const EmpLanding = () => {
     return (
     <div className='supLanding-Main'>
         <div className='supLanding-Main-Left'>
-            <p>Welcome To Health Harbor</p>
-            <p>Employee Portal</p>
+            <p className='supLanding-Main-Left-p'>Welcome To Health Harbor</p>
+            <p className='supLanding-Main-Left-p'>Employee Portal</p>
             <video autoPlay loop muted  className='background-sup'>
                 <source src={landing} type="video/mp4"/>
             </video>

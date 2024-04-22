@@ -1,4 +1,5 @@
 import React from 'react'
+import EmpManageMedicine from '../../EmpManageMedicine/EmpManageMedicine'
 
 const EmpDashViewData = ({selectMenu}) => {
   return (
@@ -10,7 +11,7 @@ const EmpDashViewData = ({selectMenu}) => {
         }
         {   (selectMenu === "ManageMedicine" || selectMenu === "RequestMedicine") &&
             <div className="managerDashView-Right-Bottom">
-                <h3>{selectMenu}</h3>
+                <h3><EmpManageMedicine/></h3>
             </div>
         }
         {   (selectMenu === "ApproveCusOrder" )

@@ -5,7 +5,7 @@ import { ManagerSideBarData } from './ManagerSideBarData';
 const ManagerSideBar = () => {
   return (
     <div>
-        <h1 >Health Harbor</h1>
+        <h1 className='sideBar-h1'>Health Harbor <br /> Manager</h1>
     
         <ul className='Sidebarlist'>
             {ManagerSideBarData.map((val,key) => {
@@ -14,7 +14,7 @@ const ManagerSideBar = () => {
                     id={window.pathname = val.link ? "active" : ""} 
                     onClick={()=> {window.location.pathname = val.link }}
                 >
-
+                    
                 {" "}
 
                 <div id='icon'> 

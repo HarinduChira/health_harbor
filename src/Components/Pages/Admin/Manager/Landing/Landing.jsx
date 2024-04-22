@@ -50,8 +50,8 @@ const handleChange = (e) => {
 return (
 <div className='supLanding-Main'>
     <div className='supLanding-Main-Left'>
-        <p>Welcome To Health Harbor</p>
-        <p>Manager Portal</p>
+        <p className='supLanding-Main-Left-p'>Welcome To Health Harbor</p>
+        <p className='supLanding-Main-Left-p'>Manager Portal</p>
         <video autoPlay loop muted  className='background-sup'>
             <source src={landing} type="video/mp4"/>
         </video>
