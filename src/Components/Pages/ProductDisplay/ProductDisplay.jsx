@@ -42,7 +42,8 @@ const ProductDisplay = ({ name }) => {
             price: product.price,
             image_url: product.image_url,
             quantity: quantity,
-            date: getDateString()
+            date: getDateString(),
+            status: "Pending"
         };
 
         try {

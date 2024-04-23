@@ -12,6 +12,8 @@ function SignUp() {
         name: "",
         email: "",
         password: "",
+        address : "NA",
+        contactNo : "NA"
     });
 
     const handleChange = (e) => {
@@ -20,6 +22,7 @@ function SignUp() {
             ...user,
             [e.target.id]: e.target.value,
         });
+
     };
 
 

@@ -11,6 +11,7 @@ import { NavLink } from 'react-router-dom'
 const Login = () => {
 
     const [user, setUser] = useState({
+        
         email: "",
         password: "",
     });

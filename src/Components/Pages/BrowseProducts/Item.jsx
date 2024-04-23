@@ -14,7 +14,8 @@ const Item = (props) => {
     price: props.price,
     image_url: props.image_url,
     quantity: quantity,
-    date: new Date().toLocaleDateString('en-GB').replace(/\//g, '-')
+    date: new Date().toLocaleDateString('en-GB').replace(/\//g, '-'),
+    status: "Pending"
   };
 
   const handleAddToCart = async (e) => {

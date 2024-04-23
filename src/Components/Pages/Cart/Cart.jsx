@@ -12,35 +12,44 @@ const Cart = () => {
   const [email, setEmail] = useState('');
 
   useEffect(() => {
+    fetchProducts();
 
-      setEmail(localStorage.getItem('email'));
-
-      axios.get('http://localhost:8080/api/CusCartList')
-      .then(res => {
-          console.log(res);
-          setProduct(res.data);
-      })
-      .catch(err => {
-          console.log(err);
-      })
   }, []);
 
-  const removeFromCart = (product_id) => {
+  const fetchProducts = () => {
+    setEmail(localStorage.getItem('email'));  
 
-    axios.delete(`http://localhost:8080/api/CusCartList/${product_id}`)
+    axios.get('http://localhost:8080/api/CusCartList')
     .then(res => {
         console.log(res);
-        alert('Product Removed from Cart');
-
-        const updatedProducts = product.filter(item => item.product_id !== product_id);
-        setProduct(updatedProducts);
-
+        setProduct(res.data);
     })
     .catch(err => {
         console.log(err);
     })
 
+    
   }
+
+  const removeFromCart = (product_id) => {
+
+    axios.delete(`http://localhost:8080/api/CusCartList/${product_id}`)
+    .then(res => {
+        console.log(res); 
+
+        if(res.status === 204)
+        {
+            alert('Product Removed from Cart');
+            fetchProducts();
+        }
+    })
+    .catch(err => {
+        console.log(err);
+        alert('Product Not Removed from Cart');
+    })
+
+  }
+
 
   let inputDate = new Date();
 
