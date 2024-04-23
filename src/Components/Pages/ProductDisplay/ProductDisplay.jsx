@@ -3,7 +3,7 @@ import './ProductDisplay.css';
 import axios from 'axios';
 
 const ProductDisplay = ({ name }) => {
-    const cus_email = "harinduchira@gmail.com";
+    const cus_email = localStorage.getItem('email');
     const [product, setProduct] = useState(null);
     const [quantity, setQuantity] = useState(1);
 

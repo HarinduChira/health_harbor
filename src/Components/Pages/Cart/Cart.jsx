@@ -9,7 +9,11 @@ const Cart = () => {
 
   const[product, setProduct] = useState([]);
 
+  const [email, setEmail] = useState('');
+
   useEffect(() => {
+
+      setEmail(localStorage.getItem('email'));
 
       axios.get('http://localhost:8080/api/CusCartList')
       .then(res => {
@@ -52,7 +56,7 @@ const Cart = () => {
   const calculateTotal = () => {
     let total = 0;                                  
     const filteredProducts = product              
-      .filter((product) => product.cus_email === "harinduchira@gmail.com" && product.date === getDateString());
+      .filter((product) => product.cus_email === email && product.date === getDateString());
   
     const mappedProducts = filteredProducts.map((product) => {
       const key = product.product_id;              
@@ -83,7 +87,7 @@ const Cart = () => {
         <hr />
 
         {product
-            .filter((product) => product.cus_email === "harinduchira@gmail.com" && product.date === getDateString() )
+            .filter((product) => product.cus_email === email && product.date === getDateString() )
             .map((product) => (
               <div className="cartitems-format cartitems-format-main"  key={product.product_id}>
               <img src={product.image_url} alt="" className='carticon-product-icon'/>

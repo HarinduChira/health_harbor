@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Item = (props) => {
   const [quantity, setQuantity] = useState(1);
 
-  const cus_email = "harinduchira@gmail.com";
+  const cus_email = localStorage.getItem('email');
 
   const item = {
     cus_email: cus_email,

@@ -36,12 +36,15 @@ const Login = () => {
             const res = await axios.get('http://localhost:8080/api/CusLogin/' + user.email + ',' + user.password);  
             console.log(res.data);
 
-            setUser({
-                email: "",
-                password: "",
-            });
+            if (res.data === "Login Success") {
+                alert("Login Success");
 
-            window.location.href = "/Customer/LogCusLanding";
+                localStorage.setItem('email', user.email);
+
+                window.location.href = "/Customer/LogCusLanding";
+            }else{
+                alert(res.data);
+            }
 
         }
         catch (error) {

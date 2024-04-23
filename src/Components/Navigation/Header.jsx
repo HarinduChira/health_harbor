@@ -20,6 +20,8 @@ const Header = ({logStatus}) => {
     if (logStatus) {
       return "Log Out";                       
     } else {
+
+      localStorage.clear();
       return "Sign Up"; 
     }
   }

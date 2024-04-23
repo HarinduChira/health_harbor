@@ -1,0 +1,34 @@
+.mgEmp-full{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    height: 50vh;
+    width: 80vmax;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mgEmp-Head{
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.mgEmp-form{
+    display: flex;
+    height: 45vh;
+    width: 100%;
+    background-color: red;
+}
+
+.mgEmp-form-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: yellow;
+}

@@ -1,13 +1,14 @@
 import React from 'react'
 import './ManagerDashViewData.css'
 import ManagerEmpList from '../../ManagerEmpList/ManagerEmpList'
+import ManagerMgEmp from '../../ManagerMgEmp/ManagerMgEmp'
 
 const ManagerDashViewData = ({selectMenu}) => {
   return (
     <div className='manageDash-main'>
         {   selectMenu === "ManageEmployee" &&
             <div className="managerDashView-Right-Top" >
-                <h2>{selectMenu}</h2>
+                <h2><ManagerMgEmp /> </h2>
             </div>
         }
         {   selectMenu === "ManageEmployee" &&

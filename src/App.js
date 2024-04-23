@@ -38,6 +38,7 @@ function App() {
 
           <Route path="/Customer" element={<CusLanding/>} />
           <Route path="/Customer/LogCusLanding" element={<LogCusLanding/>}/>
+          <Route path="/Customer/LogCusLanding/CusDashBoard" element={<LogCusLanding/>}/>
           
           <Route path='/Admin/Employee' element={<EmpLanding/>}/>
           <Route path='/Admin/Employee/EmpDashboard' element={<EmployeeDashBoard/>} />
