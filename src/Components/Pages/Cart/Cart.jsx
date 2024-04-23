@@ -79,6 +79,12 @@ const Cart = () => {
     return total;                                 
   }
 
+  const proceedCheckOut = () => {
+    alert('Proceed to Checkout');
+
+    
+  }
+
   return (
     <div className='main-cart'>
 
@@ -132,7 +138,9 @@ const Cart = () => {
               </div>  
             </div>
 
-            <button>PROCEED TO CHECKOUT</button>
+            <button onClick={
+              () => proceedCheckOut()
+            }>PROCEED TO CHECKOUT</button>
           </div>
         </div>
       </div>  

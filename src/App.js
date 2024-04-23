@@ -20,7 +20,7 @@ import SupDashBoard from './Components/Pages/Supplier/SupDashBoard/SupDashBoard/
 import SupDashView from './Components/Pages/Supplier/SupDashView/SupDashView';
 import CusLanding from './Components/Pages/Customer/CusLanding/CusLanding';
 import LogCusLanding from './Components/Pages/Customer/LogCusLanding/LogCusLanding';
-
+import CusAccount from './Components/Pages/Customer/CusAccount/CusAccount';
 
 
 function App() {
@@ -38,7 +38,8 @@ function App() {
 
           <Route path="/Customer" element={<CusLanding/>} />
           <Route path="/Customer/LogCusLanding" element={<LogCusLanding/>}/>
-          <Route path="/Customer/LogCusLanding/CusDashBoard" element={<LogCusLanding/>}/>
+          <Route path="/Customer/Account/" element={<CusAccount />}/>
+          <Route path="/Customer/Account/OrderHistory" element={<CusAccount selectMenu="OrderHistory"/>}/>
           
           <Route path='/Admin/Employee' element={<EmpLanding/>}/>
           <Route path='/Admin/Employee/EmpDashboard' element={<EmployeeDashBoard/>} />
@@ -58,6 +59,7 @@ function App() {
           <Route path="/Supplier/SupplierDashBoard" element={<SupDashBoard/>}/>
           <Route path="/Supplier/SupplierDashBoard/SupplierDashView/ManageStock" element={<SupDashView  selectMenu = "Manage Stock"/>}/>
           <Route path="/Supplier/SupplierDashBoard/SupplierDashView/ApproveRequest" element={<SupDashView selectMenu = "Approve Request" />}/>
+
 
         </Routes>
       </BrowserRouter>

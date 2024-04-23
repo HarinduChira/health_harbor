@@ -38,7 +38,7 @@ const Header = ({logStatus}) => {
         {logStatus && <li className="nav-item"><NavLink to='/Home' className= "nav-link">Home</NavLink></li> }
         {logStatus && <li className="nav-item"><NavLink to='/Browse Products' className= "nav-link">Products</NavLink></li> }
         {logStatus && <li className="nav-item"><NavLink to='/Cart' className= "nav-link">Cart</NavLink></li> }
-        {logStatus && <li className="nav-item">Account</li> }
+        {logStatus && <li className="nav-item"><NavLink to='/Customer/Account' className= "nav-link">Account</NavLink></li> }
         <li className={`${logStatus ? 'nav-item-signUp' : 'nav-item-signUp-side'}`}>
             <NavLink to="/SignUp" className="nav-link">
             <button>

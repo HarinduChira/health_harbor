@@ -30,7 +30,7 @@ const BrowseProducts = () => {
                         .filter(product => product.category === category)
                         .map(product => (
                             <li key={product.id}>
-                                <Item name={product.name} price={product.price} image_url={product.image_url} />
+                                <Item name={product.name} price={product.price} image_url={product.image_url} product_id={product.product_id} />
                             </li>
                         ))}
                 </ul>

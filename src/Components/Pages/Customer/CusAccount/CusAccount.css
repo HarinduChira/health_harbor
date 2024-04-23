@@ -1,0 +1,68 @@
+.cus-account{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff
+    ;
+}
+
+
+.header-cus-account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000e35;
+    width: 100%;
+    height: 11vh;
+}
+
+.cus-account-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+    width: 100%;
+}
+
+.body-inner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    background-color: #233a76;
+}
+
+.cus-account-SideBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    background-color: #000e35;
+}
+.cus-account-View{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background-color: #233a76;
+}
+
+.cus-account-View-Data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    background-color: #000e35;
+    color: #fff;
+}
+
