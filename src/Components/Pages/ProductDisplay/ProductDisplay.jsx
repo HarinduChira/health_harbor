@@ -43,7 +43,7 @@ const ProductDisplay = ({ name }) => {
             image_url: product.image_url,
             quantity: quantity,
             date: getDateString(),
-            status: "Pending"
+            status: "Cart"
         };
 
         try {
