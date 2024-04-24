@@ -12,7 +12,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000e35;
     width: 100%;
     height: 11vh;
 }
@@ -34,7 +33,7 @@
     width: 80%;
     height: 80%;
     padding: 30px;
-    background-color: #233a76;
+    background-color: #2d7089;
 }
 
 .cus-account-SideBar{
@@ -44,7 +43,6 @@
     align-items: center;
     width: 20%;
     height: 100%;
-    background-color: #000e35;
 }
 .cus-account-View{
     display: flex;
@@ -53,7 +51,6 @@
     align-items: center;
     width: 80%;
     height: 100%;
-    background-color: #233a76;
 }
 
 .cus-account-View-Data{
@@ -62,7 +59,6 @@
     align-items: center;
     width: 95%;
     height: 100%;
-    background-color: #000e35;
     color: #fff;
 }
 

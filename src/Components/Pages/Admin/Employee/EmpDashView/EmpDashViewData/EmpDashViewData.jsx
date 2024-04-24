@@ -1,17 +1,22 @@
 import React from 'react'
 import EmpManageMedicine from '../../EmpManageMedicine/EmpManageMedicine'
+import EmpReqMedicine from '../../EmpReqMedicine/EmpReqMedicine'
+import EmpRequestMedicine from '../../EmpReqMedicine/EmpRequestMedicine'
+import EmpAddMed from '../../EmpAddMed/EmpAddMed'
 
 const EmpDashViewData = ({selectMenu}) => {
   return (
     <div className='manageDash-main'>
         {   (selectMenu === "ManageMedicine" || selectMenu === "RequestMedicine") &&
             <div className="managerDashView-Right-Top" >
-                <h2>{selectMenu}</h2>
+                {selectMenu === "ManageMedicine"  && <EmpAddMed/>}
+                {selectMenu === "RequestMedicine"  && <EmpRequestMedicine/>}    
             </div>
         }
         {   (selectMenu === "ManageMedicine" || selectMenu === "RequestMedicine") &&
             <div className="managerDashView-Right-Bottom">
-                <h3><EmpManageMedicine/></h3>
+                {selectMenu === "ManageMedicine"  && <EmpManageMedicine/>}
+                {selectMenu === "RequestMedicine"  && <EmpReqMedicine/>}    
             </div>
         }
         {   (selectMenu === "ApproveCusOrder" )

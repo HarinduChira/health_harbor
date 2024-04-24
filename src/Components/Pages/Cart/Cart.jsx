@@ -12,43 +12,40 @@ const Cart = () => {
   const [email, setEmail] = useState('');
 
   useEffect(() => {
+    setEmail(localStorage.getItem('email'));
     fetchProducts();
-
   }, []);
 
   const fetchProducts = () => {
-    setEmail(localStorage.getItem('email'));  
-
     axios.get('http://localhost:8080/api/CusCartList')
-    .then(res => {
+      .then(res => {
         console.log(res);
         setProduct(res.data);
-    })
-    .catch(err => {
+      })
+      .catch(err => {
         console.log(err);
-    })
-
-    
+      });
   }
 
-  const removeFromCart = (product_id) => {
 
-    axios.delete(`http://localhost:8080/api/CusCartList/${product_id}`)
-    .then(res => {
-        console.log(res); 
+  const removeFromCart = (productId) => {
 
-        if(res.status === 204)
-        {
-            alert('Product Removed from Cart');
-            fetchProducts();
+    const product_id = parseInt(productId);
+
+    axios.delete('http://localhost:8080/api/CusCartList/'+ product_id)
+      .then(res => {
+        console.log(res);
+        if (res.status === 204) { 
+          alert('Product removed from cart');
+          // Update the products state to remove the deleted item
+          setProduct(prevProducts => prevProducts.filter(product => product.product_id !== productId));
         }
-    })
-    .catch(err => {
+      })
+      .catch(err => {
         console.log(err);
-        alert('Product Not Removed from Cart');
-    })
-
-  }
+        alert('Product not removed from cart');
+      });
+  };
 
 
   let inputDate = new Date();
@@ -65,7 +62,7 @@ const Cart = () => {
   const calculateTotal = () => {
     let total = 0;                                  
     const filteredProducts = product              
-      .filter((product) => product.cus_email === email && product.date === getDateString());
+      .filter((product) => product.cus_email === email && product.status === 'Cart');
   
     const mappedProducts = filteredProducts.map((product) => {
       const key = product.product_id;              
@@ -82,7 +79,33 @@ const Cart = () => {
   const proceedCheckOut = () => {
     alert('Proceed to Checkout');
 
-    
+    const filteredProducts = product
+      .filter((product) => product.cus_email === email && product.status === 'Cart');
+
+    const mappedProducts = filteredProducts.map((product) => {
+      const key = product.product_id;              
+      return { 
+        key, 
+        product_id: product.product_id};
+    });
+
+    mappedProducts.forEach((product) => {
+
+      const product_id = parseInt(product.product_id);
+      
+      axios.put('http://localhost:8080/api/CusCartList/'+product_id)
+        .then(res => {
+          console.log(res);
+          if (res.status === 204) {
+            alert('Product moved to checkout');
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          alert('Product not moved to checkout');
+        });
+      }
+    );
   }
 
   return (
@@ -138,9 +161,7 @@ const Cart = () => {
               </div>  
             </div>
 
-            <button onClick={
-              () => proceedCheckOut()
-            }>PROCEED TO CHECKOUT</button>
+            <button onClick={proceedCheckOut}>PROCEED TO CHECKOUT</button>
           </div>
         </div>
       </div>  

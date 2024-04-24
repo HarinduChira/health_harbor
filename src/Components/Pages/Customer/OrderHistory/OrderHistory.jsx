@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import './OrderHistory.css'
 
 const OrderHistory = () => {
 
@@ -34,11 +35,11 @@ const OrderHistory = () => {
             </thead>
             <tbody>
                 {cusCartList
-                    .filter((cusCartList) => cusCartList.cus_email === localStorage.getItem('email') && cusCartList.status === 'Pending')
+                    .filter((cusCartList) => cusCartList.cus_email === localStorage.getItem('email') && cusCartList.status === 'Cart')
                     .map((cusCartList) => (
                     
                     <tr>
-                        <td>{cusCartList.image_url}</td>
+                        <td><img src={cusCartList.image_url} className='img-src-table' alt="" /></td>
                         <td>{cusCartList.product_name}</td>
                         <td>{cusCartList.price}</td>
                         <td>{cusCartList.quantity}</td>

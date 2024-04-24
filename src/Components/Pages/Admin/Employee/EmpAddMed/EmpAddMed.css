@@ -1,0 +1,53 @@
+.addMedicine {
+    display: flex;
+    flex-direction: Row;
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+    justify-content: center;
+}
+
+.addMedicine-Left{
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    background-color: #6e5cd4;
+    align-items: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 25px;
+    margin-left: 350px;
+}
+
+.addMedicine-Right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    background-color: #023b04;
+    align-items: left;
+    justify-content: center;
+}
+
+
+.addMedicine-Right-btn{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+
+}
+
+  

@@ -38,7 +38,7 @@ function App() {
 
           <Route path="/Customer" element={<CusLanding/>} />
           <Route path="/Customer/LogCusLanding" element={<LogCusLanding/>}/>
-          <Route path="/Customer/Account/" element={<CusAccount />}/>
+          <Route path="/Customer/Account/ManageAccount" element={<CusAccount selectMenu="ManageAccount"/>}/>
           <Route path="/Customer/Account/OrderHistory" element={<CusAccount selectMenu="OrderHistory"/>}/>
           
           <Route path='/Admin/Employee' element={<EmpLanding/>}/>

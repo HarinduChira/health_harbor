@@ -18,12 +18,12 @@ const CusAccount = ({selectMenu}) => {
                 </div>
                 <div className="cus-account-View">
                     <div className="cus-account-View-Data">
-                        {selectMenu="OrderHistory"  && 
+                        {selectMenu=== "OrderHistory"  && 
                            <div className="orderHistory">
                                 <OrderHistory/>
                            </div>
                         }
-                        {selectMenu="ManageAccount" && 
+                        {selectMenu === "ManageAccount" && 
                             <div className="account">
                                 <h1>Account</h1>    
                             </div>

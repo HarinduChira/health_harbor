@@ -38,16 +38,21 @@ const Header = ({logStatus}) => {
         {logStatus && <li className="nav-item"><NavLink to='/Home' className= "nav-link">Home</NavLink></li> }
         {logStatus && <li className="nav-item"><NavLink to='/Browse Products' className= "nav-link">Products</NavLink></li> }
         {logStatus && <li className="nav-item"><NavLink to='/Cart' className= "nav-link">Cart</NavLink></li> }
-        {logStatus && <li className="nav-item"><NavLink to='/Customer/Account' className= "nav-link">Account</NavLink></li> }
+        {logStatus && <li className="nav-item"><NavLink to='/Customer/Account/ManageAccount' className= "nav-link">Account</NavLink></li> }
+        
         <li className={`${logStatus ? 'nav-item-signUp' : 'nav-item-signUp-side'}`}>
+            {!logStatus && <NavLink to="/Admin/Manager" className="nav-link">Manager</NavLink>}
+            {!logStatus && <NavLink to="/Admin/Employee" className="nav-link">Employee</NavLink>}
+            {!logStatus && <NavLink to="/Supplier" className="nav-link">Supplier</NavLink>}
+            
             <NavLink to="/SignUp" className="nav-link">
             <button>
             <img src={log} alt="" />
             <p>{signLogout()}</p>              
             </button>
-            </NavLink>
-              
-        </li>      
+            </NavLink>  
+                
+        </li>     
       </ul>
       
     </div>
