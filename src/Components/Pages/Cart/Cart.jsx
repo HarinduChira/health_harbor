@@ -11,6 +11,8 @@ const Cart = () => {
 
   const [email, setEmail] = useState('');
 
+  const [detailStatus, setDetailStatus] = useState(false);
+
   useEffect(() => {
     setEmail(localStorage.getItem('email'));
     fetchProducts();
@@ -28,17 +30,19 @@ const Cart = () => {
   }
 
 
-  const removeFromCart = (productId) => {
+  const removeFromCart = (product_Id) => {
 
-    const product_id = parseInt(productId);
+    const productId = parseInt(product_Id);
 
-    axios.delete('http://localhost:8080/api/CusCartList/'+ product_id)
+    axios.delete('http://localhost:8080/api/CusCartList/'+ productId)
       .then(res => {
         console.log(res);
         if (res.status === 204) { 
           alert('Product removed from cart');
           // Update the products state to remove the deleted item
-          setProduct(prevProducts => prevProducts.filter(product => product.product_id !== productId));
+          setProduct(prevProducts => prevProducts.filter(product => product.productId !== productId));
+
+          
         }
       })
       .catch(err => {
@@ -47,25 +51,13 @@ const Cart = () => {
       });
   };
 
-
-  let inputDate = new Date();
-
-  const getDateString = () => {
-
-      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-  
-      const formattedDate = inputDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
-
-      return formattedDate;
-  }  
-
   const calculateTotal = () => {
     let total = 0;                                  
     const filteredProducts = product              
       .filter((product) => product.cus_email === email && product.status === 'Cart');
   
     const mappedProducts = filteredProducts.map((product) => {
-      const key = product.product_id;              
+      const key = product.productId;              
       return { key, price: product.price, quantity: product.quantity };
     });
   
@@ -76,37 +68,63 @@ const Cart = () => {
     return total;                                 
   }
 
-  const proceedCheckOut = () => {
-    alert('Proceed to Checkout');
+  const getCusAddress = () => {
 
-    const filteredProducts = product
-      .filter((product) => product.cus_email === email && product.status === 'Cart');
+    axios.get(`http://localhost:8080/api/Customer/GetByEmail/${email}`)
+      .then(res => {
+        console.log(res);
 
-    const mappedProducts = filteredProducts.map((product) => {
-      const key = product.product_id;              
-      return { 
-        key, 
-        product_id: product.product_id};
-    });
-
-    mappedProducts.forEach((product) => {
-
-      const product_id = parseInt(product.product_id);
-      
-      axios.put('http://localhost:8080/api/CusCartList/'+product_id)
-        .then(res => {
-          console.log(res);
-          if (res.status === 204) {
-            alert('Product moved to checkout');
-          }
-        })
-        .catch(err => {
-          console.log(err);
-          alert('Product not moved to checkout');
-        });
-      }
-    );
+        if(res.data.addressNo === 'NA' || res.data.contactNo === 'NA' || res.data.addressStreet === 'NA' || res.data.addressCity === 'NA'){
+          alert('Please update your address and contact number');
+          window.location.href = '/Customer/Account/ManageAccount';
+        }
+        else{
+          setDetailStatus(true);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+        alert('Error in getting customer address');
+      });
   }
+
+  const proceedCheckOut = () => {
+
+      alert('Proceed to Checkout');
+
+      getCusAddress();
+
+  }
+
+  const proceedOrder = () => {
+    // Display alert indicating order is being proceeded
+    alert('Order Proceeded');
+
+    // Filter products to select only those in the cart for the logged-in customer
+    const filteredProducts = product.filter((product) => product.cus_email === email && product.status === 'Cart');
+
+    // Iterate over filtered products
+    filteredProducts.forEach((product) => {
+        // Construct URL for updating product status
+        const updateUrl = `http://localhost:8080/api/CusCartList/UpdateStatus/${product.productId},${"Pending"}`;
+
+        // Send PUT request to update product status
+        axios.put(updateUrl)
+            .then(res => {
+                // Handle successful response
+                console.log(res);
+                alert('Product status updated');
+                window.location.href = '/Customer/Account/OrderHistory';
+            })
+            .catch(err => {
+                // Handle error
+                console.error(err);
+                alert('Error in updating product status');
+            });
+    });
+};
+
+  
 
   return (
     <div className='main-cart'>
@@ -125,16 +143,16 @@ const Cart = () => {
         <hr />
 
         {product
-            .filter((product) => product.cus_email === email && product.date === getDateString() )
+            .filter((product) => product.cus_email === email && product.status === 'Cart')
             .map((product) => (
-              <div className="cartitems-format cartitems-format-main"  key={product.product_id}>
+              <div className="cartitems-format cartitems-format-main"  key={product.productId}>
               <img src={product.image_url} alt="" className='carticon-product-icon'/>
               <p className='cart-p'>{product.product_name}</p>
               <p className='cart-p'>Rs. {product.price}</p>
               <button className='cartitems-qunatity'>{product.quantity}</button>
               <p className='cart-p'>Rs. {product.price * product.quantity}</p>
               <button className='cartitems-remove-button' onClick={() => 
-                removeFromCart(product.product_id)}>Remove</button>
+                removeFromCart(product.productId)}>Remove</button>
             </div>
           ))
         }
@@ -161,9 +179,41 @@ const Cart = () => {
               </div>  
             </div>
 
-            <button onClick={proceedCheckOut}>PROCEED TO CHECKOUT</button>
+            {!detailStatus && <button onClick={proceedCheckOut}>PROCEED TO CHECKOUT</button> }
           </div>
         </div>
+
+        { detailStatus && <div className="cartitems-down">
+            <div className="cartitems-total">
+              <h1>Address Details </h1>
+              <div>
+                <div className="cartitems-total-items">
+                  <p>Address No</p>
+                  <p>Rs. {calculateTotal()}</p>
+                </div>
+                <hr />
+                <div className="cartitems-total-items">
+                  <p>Address Street</p>
+                  <p>Rs. {calculateTotal()}</p>
+                </div>
+                <hr />
+                <div className="cartitems-total-items">
+                  <p>Address City</p>
+                  <p>Rs. {calculateTotal()}</p>
+                </div>  
+                <hr />
+                <div className="cartitems-total-items">
+                  <p>Contact No</p>
+                  <p>Rs. {calculateTotal()}</p>
+                </div> 
+              </div>
+
+              <button onClick={proceedOrder}>PROCEED ORDER</button>
+            </div>
+        </div>
+        }
+
+
       </div>  
       <Footer/>
     </div>

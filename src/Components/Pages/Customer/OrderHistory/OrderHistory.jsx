@@ -35,7 +35,7 @@ const OrderHistory = () => {
             </thead>
             <tbody>
                 {cusCartList
-                    .filter((cusCartList) => cusCartList.cus_email === localStorage.getItem('email') && cusCartList.status === 'Cart')
+                    .filter((cusCartList) => cusCartList.cus_email === localStorage.getItem('email'))
                     .map((cusCartList) => (
                     
                     <tr>
@@ -44,7 +44,7 @@ const OrderHistory = () => {
                         <td>{cusCartList.price}</td>
                         <td>{cusCartList.quantity}</td>
                         <td>{cusCartList.date}</td>
-                        <td>{cusCartList.price }* {cusCartList.quantity}</td>
+                        <td>{cusCartList.price * cusCartList.quantity}</td>
                         <td>{cusCartList.status}</td>
                     </tr>
                     ))

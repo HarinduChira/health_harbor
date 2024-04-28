@@ -1,0 +1,111 @@
+.cus-mg-account {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 110vb;
+    height: 70vh;
+    color: #000;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+}
+
+.cus-mg-account-details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: #000 solid 2px;
+    padding: 5px;
+}
+
+.cus-mg-account-details-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80%;
+    gap: 20px;
+}
+
+.cus-mg-account-password{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: #000 solid 2px;
+    padding: 5px;
+}
+
+.cus-mg-account-password-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80%;
+    gap: 20px;
+}
+
+.cus-mg-h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #534848;
+    height: 100%;
+    justify-content: center;
+    align-items:center;
+    border-radius: 20px;
+    display: flex;    
+}
+
+.cus-mg-account-details-form-input{
+    width: 100%;
+    font-size: 1.5rem;
+    color: #534848;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cus-mg-account-details-form-label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #534848;
+    justify-content: left;
+    display: flex;
+    width: 30%;
+}
+
+.cus-mg-account-details-form-inputs{
+    font-size: 1.3rem;
+    color: #7d3030;
+    display: flex;
+    width: 70%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.cus-mg-acnt-btn{
+    font-size: 1.4rem;
+    color: #000e35;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #efdc57;
+    border-radius: 20px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+.cus-mg-acnt-btn:hover{
+    background-color: #ffffff;
+}

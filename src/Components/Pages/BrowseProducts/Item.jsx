@@ -9,7 +9,7 @@ const Item = (props) => {
 
   const item = {
     cus_email: cus_email,
-    product_id: props.product_id,
+    productId: props.product_id,
     product_name: props.name,
     price: props.price,
     image_url: props.image_url,

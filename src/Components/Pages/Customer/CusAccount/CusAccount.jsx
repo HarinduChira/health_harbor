@@ -3,6 +3,7 @@ import Header from '../../../Navigation/Header'
 import './CusAccount.css'
 import CusACSideBar from './CusACSideBar/CusACSideBar'
 import OrderHistory from '../OrderHistory/OrderHistory'
+import CusMgAccount from './CusMgAccount/CusMgAccount'
 
 const CusAccount = ({selectMenu}) => {
   return (
@@ -25,7 +26,7 @@ const CusAccount = ({selectMenu}) => {
                         }
                         {selectMenu === "ManageAccount" && 
                             <div className="account">
-                                <h1>Account</h1>    
+                                <CusMgAccount/> 
                             </div>
                         }
                     </div>

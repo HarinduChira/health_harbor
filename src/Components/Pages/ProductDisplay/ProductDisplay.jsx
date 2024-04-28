@@ -37,7 +37,7 @@ const ProductDisplay = ({ name }) => {
 
         const item = {
             cus_email: cus_email,
-            product_id: product.product_id,
+            productId: product.product_id,
             product_name: product.name,
             price: product.price,
             image_url: product.image_url,

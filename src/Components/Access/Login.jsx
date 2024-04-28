@@ -34,7 +34,7 @@ const Login = () => {
         }
 
         try{
-            const res = await axios.get('http://localhost:8080/api/CusLogin/' + user.email + ',' + user.password);  
+            const res = await axios.get('http://localhost:8080/api/Customer/Check/' + user.email + ',' + user.password);  
             console.log(res.data);
 
             if (res.data === "Login Success") {

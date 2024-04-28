@@ -12,7 +12,9 @@ function SignUp() {
         name: "",
         email: "",
         password: "",
-        address : "NA",
+        addressNo : "NA",
+        addressStreet : "NA",
+        addressCity : "NA",
         contactNo : "NA"
     });
 
@@ -35,7 +37,7 @@ function SignUp() {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/api/CusLogin/AddCus", {
+            const response = await fetch("http://localhost:8080/api/Customer/AddCus", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -27,7 +27,7 @@ const BrowseProducts = () => {
                 <h1>{category}</h1>
                 <ul className={category.toLowerCase().replace(/\s+/g, '')}>
                     {products
-                        .filter(product => product.category === category)
+                        .filter(product => product.category === category && product.status === "Display")
                         .map(product => (
                             <li key={product.id}>
                                 <Item name={product.name} price={product.price} image_url={product.image_url} product_id={product.product_id} />
